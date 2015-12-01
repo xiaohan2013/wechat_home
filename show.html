@@ -1,0 +1,4170 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <script>
+        var speedTimePoint = [
+            [(new Date()), 1470, 120, 9, 1470, 120, 10, 1470, 120, 11, 1470, 120, 45]
+
+        ];
+        speedTimePoint.rptTime = 3000;
+        speedTimePoint.diffNetwork = true;
+        speedTimePoint.huatuoReport = true;
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>京东购物</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+    <!--S 线上样式-->
+    <!--服务器提供了这样的请求的能力-->
+    <link combofile="wallet/wallet_v2.shtml" rel="stylesheet"
+          href="http://wq.360buyimg.com/c/=/fd/base/css/base/base.s.min.css,/fd/base/css/base/mod_nav_foot.s.min.css,/fd/wx/css/base/wx_bar_v2.s.min.css,/fd/wx/css/wallet/wallet_v2.s.min.css,/fd/wx/css/wallet/wallet_v2_guide.s.min.css?t=1448012071"/>
+    <!--E 线上样式-->
+
+
+    <style type="text/css">
+        .wet_slider {
+            min-height: 170px;
+        }
+
+        #divTopBanner > .list {
+            min-height: 150px;
+        }
+
+        .wet_app_panel {
+            min-height: 40px;
+        }
+
+        .wei_tp_list {
+            min-height: 100px;
+        }
+
+        .wei_tm_panel {
+            min-height: 80px;
+        }
+
+        .wet_mat_panel {
+            min-height: 100px;
+        }
+
+        .WX_backtop_active {
+            display: block;
+            bottom: 60px;
+        }
+    </style>
+
+    <script>
+        speedTimePoint["1"] = new Date();
+        function firstImgLoaded() {
+            !speedTimePoint[4] && (speedTimePoint[4] = new Date());
+        }
+    </script>
+
+</head>
+<body>
+<script>
+    window.onerror = function (a, b, c, d, e) {
+        function f(a) {
+            var b, c;
+            if ("object" == typeof a) {
+                if (null === a)return "null";
+                if (window.JSON && window.JSON.stringify)return JSON.stringify(a);
+                c = g(a), b = [];
+                for (var d in a)b.push((c ? "" : '"' + d + '":') + f(a[d]));
+                return b = b.join(), c ? "[" + b + "]" : "{" + b + "}"
+            }
+            return "undefined" == typeof a ? "undefined" : "number" == typeof a || "function" == typeof a ? a.toString() : a ? '"' + a + '"' : '""'
+        }
+
+        function g(a) {
+            return "[object Array]" == Object.prototype.toString.call(a)
+        }
+
+        var h, i = window;
+        if (d = d || i.event && i.event.errorCharacter || 0, e && e.stack)a = e.stack.toString(); else if (arguments.callee) {
+            for (var j = [a], k = arguments.callee.caller, l = 3; k && --l > 0 && (j.push(k.toString()), k !== k.caller);)k = k.caller;
+            j = j.join(","), a = j
+        }
+        if (h = f(a) + (b ? ";URL:" + b : "") + (c ? ";Line:" + c : "") + (d ? ";Column:" + d : ""), i._last_err_msg) {
+            if (i._last_err_msg.indexOf(a) > -1)return;
+            i._last_err_msg += "|" + a
+        } else i._last_err_msg = a;
+        if (-1 === h.indexOf("WeixinJSBridge") && (setTimeout(function () {
+                    console.log("ERROR:" + h);
+                    var a = encodeURIComponent(h), b = new Image;
+                    b.src = "//wq.jd.com/webmonitor/collect/badjs.json?Content=" + a + "&t=" + Math.random()
+                }, 1e3), window._BADJSCHECKRPT))try {
+            setTimeout(function () {
+                JD && JD.report.umpBiz({
+                    bizid: 55,
+                    operation: _BADJSCHECKRPT.operation,
+                    result: "1",
+                    source: "0",
+                    message: ""
+                })
+            }, 1e3)
+        } catch (m) {
+        }
+        return !1
+    };
+</script>
+<script>
+    try {
+        (function (g) {
+            g.jdpts = {};
+            jdpts._st = new Date().getTime();
+            g.jdtj = g.jdtj || {};
+            jdtj.st = jdpts._st;
+            function c(l, k, j) {
+                if (l.addEventListener) {
+                    l.addEventListener(k, j, false)
+                } else {
+                    if (l.attachEvent) {
+                        l.attachEvent("on" + k, j)
+                    } else {
+                        l["on" + k] = j
+                    }
+                }
+            }
+
+            function e(j) {
+                var k = new RegExp("(^| )" + j + "(?:=([^;]*))?(;|$)"), l = document.cookie.match(k);
+                return l ? (l[2] ? unescape(l[2]) : "") : null
+            }
+
+            function f(k, m, j, o) {
+                var l = e(k);
+                if (l != null) {
+                    var n = new Date();
+                    n.setMinutes(n.getMinutes() - 1000);
+                    m = m || "/";
+                    document.cookie = k + "=;expires=" + n.toGMTString() + (m ? ";path=" + m : "") + (j ? ";domain=" + j : "") + (o ? ";secure" : "")
+                }
+            }
+
+            function i(j) {
+                var k = new Image(1, 1);
+                k.src = j;
+                k.onload = function () {
+                    k.onload = null;
+                    k.onerror = null
+                };
+                k.onerror = function () {
+                    k.onload = null;
+                    k.onerror = null
+                };
+                g._mercury_head_img = k
+            }
+
+            function b() {
+                var j = e("__wga") || "";
+                j = j ? j.split(".") : [];
+                return j[5] ? j[5] : 1
+            }
+
+            function h() {
+                var j = ("https:" == location.protocol ? "https://mercuryssl" : "http://hermes") + ".jd.com/log.gif?t=wg_wx.100000&m=MO_J2011-2&pin=" + encodeURIComponent(e("jdpin") || "-") + "&sid=" + e("visitkey") + "|" + b() + "&v=&url=" + encodeURIComponent(location.href) + "&ref=" + encodeURIComponent(document.referrer || "") + "&rm=" + (new Date).getTime();
+                i(j)
+            }
+
+            function a() {
+                var m = e("visitkey") || "";
+                var k = /^([1-9])$/;
+                var j = window.JD && window.JD.GLOBAL_CONFIG.RDPS_PERCENT;
+                if (j == 0) {
+                    return
+                } else {
+                    if (k.test(j)) {
+                        if (!m || (parseInt(m.substr(-1)) > j) || (parseInt(m.substr(-1)) == 0)) {
+                            return
+                        }
+                    } else {
+                        if (!m) {
+                            return
+                        }
+                    }
+                }
+                var l = e("_tj_rpds") || "";
+                if (!l) {
+                    return
+                }
+                f("_tj_rpds", "/", "jd.com");
+                i("http://wq.jd.com/mcoss/rpds/rp?rpid=16&val=" + l)
+            }
+
+            function d() {
+                c(document, "DOMContentLoaded", function () {
+                    jdtj.et = Date.now()
+                })
+            }
+
+            h();
+            a();
+            d()
+        })(window)
+    } catch (ex) {
+    };
+</script>
+
+
+<!--WEBPAGEBEGIN@8505-->
+<script type="text/javascript">
+    window._cgiDisasterRecovery = [
+        {name: "卖快", cgikey: "mart", percent: "0", whitelist: ""},
+        {name: "焦点cpt", cgikey: "cpt", percent: "0", whitelist: "{#whitelist#}"},
+        {name: "焦点cpc", cgikey: "cpc", percent: "0", whitelist: "{#whitelist#}"},
+        {name: "mportal", cgikey: "mportal", percent: "0", whitelist: "{#whitelist#}"},
+        {name: "素材详情", cgikey: "materialQuery", percent: "0", whitelist: "{#whitelist#}"},
+        {name: "multiMart", cgikey: "multiMart", percent: "0", whitelist: "{#whitelist#}"}
+    ]</script>
+<!--WEBPAGEEND@8505-->
+<script>
+    !function (a) {
+        function b() {
+            var a = location.host.indexOf("jd.com") > -1 ? "jd.com" : "wanggou.com";
+            g.cookie.set("retina", g.device.retina ? 1 : 0, 43200, "/", a);
+            var b = g.device.scene, c = {weixin: 1, qq: 2, jzyc: 4, jxj: 6, mobile: 3};
+            g.cookie.set("cid", c[b] || 3, 43200, "/", a)
+        }
+
+        function c() {
+            var a = function (a, b) {
+                this.origin = a,
+                this.path = b,
+                this._iframe = null,
+                this._iframeReady = !1,
+                this._queue = [],
+                this._requests = {},
+                this._id = 0
+            };
+            a.prototype = {
+                op: {WRITE: "W", READ: "R", DEL: "D", CLEAR: "X", GETALLMODULEJS: "M"},
+                constructor: a,
+                init: function () {
+                    try {
+                        if (!this._iframe) {
+                            if (!(window.JSON && window.localStorage && window.postMessage && "localStorage"in window && null !== window.localStorage))
+                                return this._queue.every(function (a) {
+                                a.callback && a.callback(null, null, {errNo: 1})
+                            }), !1;
+                            this._iframe = document.createElement("iframe"),
+                            this._iframe.style.cssText = "position:absolute;width:1px;height:1px;left:-9999px;",
+                            document.body.appendChild(this._iframe),
+                            window.addEventListener && (this._iframe.addEventListener("load", function () {
+                                b._iframeLoaded()
+                            }, !1),
+                            window.addEventListener("message", function (a) {
+                                b._handleMessage(a)
+                            }, !1))
+                        }
+                        this._iframe.src = this.origin.replace("http:", "") + this.path
+                    } catch (a) {
+                    }
+                    var b = this
+                },
+                setHistory: function (a) {
+                    function b() {
+                        wgStorage.set(a)
+                    }
+
+                    window.wgStorage ? b() : window.wgStorageReady = function () {
+                        b()
+                    }
+                },
+                get: function (a, b) {
+                    this._toSend({key: a, op: this.op.READ}, b)
+                },
+                getAllModulejs: function (a) {
+                    this._toSend({key: "getmodulejs", op: this.op.GETALLMODULEJS}, a)
+                },
+                setValue: function (a, b, c, d) {
+                    c = c || 5;
+                    var e = (new Date).getTime() + 60 * c * 1e3, f = {value: b, expires: e};
+                    this.set(a, f, d)
+                },
+                getValue: function (a, b) {
+                    var c = (new Date).getTime(), d = this;
+                    this.get(a, function (a, e) {
+                        e && e.expires ? e.expires < c ? (d.del(a), b && b(a, null, {errNo: 0})) : b && b(a, e.value, {errNo: 0}) : b && b(a, null, {errNo: 0})
+                    })
+                },
+                set: function (a, b, c) {
+                    this._toSend({key: a, op: this.op.WRITE, value: b}, c)
+                },
+                del: function (a, b, c) {
+                    this._toSend({key: a, op: this.op.DEL, value: b}, c)
+                },
+                clear: function (a) {
+                    this._toSend({op: this.op.CLEAR}, a)
+                },
+                _toSend: function (a, b) {
+                    if (document.domain == this.origin.replace("http://", ""))
+                        try {
+                        if (window.JSON && window.localStorage && window.postMessage && "localStorage"in window && null !== window.localStorage) {
+                            var c, d = localStorage;
+                            if ("M" === a.op) {
+                                var e = [];
+                                for (var f in localStorage)/^_m_/.test(f) && e.push({
+                                    key: f,
+                                    obj: localStorage.getItem(f)
+                                });
+                                b && b(a.key, e, {errNo: 0})
+                            } else"W" === a.op ? (d.setItem(a.key, JSON.stringify(a.value)), b && b({errNo: 0})) : "D" === a.op ? (d.removeItem(a.key), b && b({errNo: 0})) : "X" === a.op ? (d.clear(), b && b({errNo: 0})) : (c = JSON.parse(d.getItem(a.key)), b && b(a.key, c, {errNo: 0}))
+                        } else b && b(a.key, null, {errNo: 0})
+                    } catch (g) {
+                        b && b(a.key, null, {errNo: 1})
+                    } else {
+                        var h;
+                        if ("R" == a.op || "M" == a.op) {
+                            var i = function () {
+                                h = setTimeout(function () {
+                                    b && b(a.key, null, {errNo: 2})
+                                }, 3e3)
+                            };
+                            i(b)
+                        }
+                        var j = {
+                            request: {key: a.key, id: ++this._id, op: a.op, value: a.value, timer: h},
+                            callback: b
+                        };
+                        this._iframeReady ? this._sendRequest(j) : this._queue.push(j), this._iframe || this.init()
+                    }
+                },
+                _sendRequest: function (a) {
+                    this._requests[a.request.id] = a, this._iframe.contentWindow.postMessage(JSON.stringify(a.request), this.origin)
+                },
+                _iframeLoaded: function () {
+                    if (this._iframeReady = !0, this._queue.length) {
+                        for (var a = 0, b = this._queue.length; b > a; a++)this._sendRequest(this._queue[a]);
+                        this._queue = []
+                    }
+                },
+                _handleMessage: function (a) {
+                    if (a.origin == this.origin) {
+                        var b = JSON.parse(a.data);
+                        this._requests[b.id] && (b.timer && (console.log("clear timer " + b.timer), clearTimeout(b.timer)), this._requests[b.id].callback && this._requests[b.id].callback(b.key, b.value), delete this._requests[b.id])
+                    }
+                }
+            },
+            g.store = new a("http://wqs.jd.com", "/portal/wx/storageBridge2.shtml?20151127")
+        }
+
+        function d() {
+            if ("1" == g.cookie.get("webp"))g.device.webp = !0; else if (-1 !== navigator.userAgent.toLowerCase().indexOf("webp"))g.device.webp = !0, g.cookie.set("webp", 0, 5256e3, "/", "jd.com"); else {
+                var a = new Image, b = setTimeout(function () {
+                    a.onload = a.onerror = null, a = null
+                }, 500);
+                a.onload = function () {
+                    clearTimeout(b), g.device.webp = a.width > 0 && a.height > 0, g.cookie.set("webp", g.device.webp ? 1 : 0, 5256e3, "/", "jd.com")
+                }, a.onerror = function () {
+                    clearTimeout(b), g.cookie.set("webp", 0, 5256e3, "/", "jd.com"), g.device.webp = !1
+                }, a.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA"
+            }
+        }
+
+        function e() {
+            if ("qq" == g.device.scene) {
+                var a = /(wanggou.com|qq.com|jd.com)$/i.exec(location.host), b = g.url.getUrlParam("sid"), c = g.url.getUrlParam("uk"), d = g.cookie.get("sid"), e = g.cookie.set;
+                a && 2 === a.length && (host = a[1], b && (e("sid", b, 43200, "", host), d != b && (e("wg_skey", "", 60, "", host), e("wg_uin", "", 60, "", host), e("wq_skey", "", 60, "", host), e("wq_uin", "", 60, "", host))), c && e("uk", c, 43200, "", host))
+            }
+        }
+
+        //
+        function f() {
+            var a = [].slice.call(document.images);
+            arguments.callee.counter != a.length && (a.forEach(function (a) {
+                a.onerror || (a.onerror = function () {
+                    g.report.imageLoadError(this)
+                })
+            }),
+            arguments.callee.counter = a.length), setTimeout(arguments.callee, 33)
+        }
+
+        var g = {}, h = [];
+        g.send = function (a) {
+            var b = (new Date).getTime(), c = "_COUNTRD" + b++;
+            try {
+                window[c] = new Image, window[c].src = a
+            } catch (d) {
+            }
+        },
+        g.sendJs = function (a, b) {
+            function c() {
+                d && (d.onload = d.onreadystatechange = d.onerror = null, d.parentNode && d.parentNode.removeChild(d), d = null)
+            }
+
+            var d = document.createElement("script");
+            b = b || {}, d.charset = b.charset || "utf-8", d.onload = d.onreadystatechange = function () {
+                (/loaded|complete/i.test(this.readyState) || -1 == navigator.userAgent.toLowerCase().indexOf("msie")) && (b.onLoad && b.onLoad(), c())
+            }, d.onerror = function () {
+                b.onError && b.onError(), c()
+            }, d.src = a, b.defer && (d.defer = "defer"), b.async && (d.async = "async"), b.crossorigin && d.setAttribute("crossorigin", "true"), document.getElementsByTagName("head")[0].appendChild(d)
+        },
+        g.sendJsByDomain = function (a) {
+            var b = arguments.callee;
+            a.tryTimes = a.tryTimes || 0, a.timeStamp = a.timeStamp || "", g.sendJs([a.url, window.GLOBAL_CROSSORIGIN ? (a.url.indexOf("?") > 0 ? "&" : "?") + "host=" + location.host : "", a.timeStamp].join(""), {
+                onError: function () {
+                    a.tryTimes++;
+                    var c = a.tryTimes;
+                    1 === c ? (a.timeStamp = "&r=" + Date.now(), b(a)) : 2 === c && (a.timeStamp = "", a.crossOrigin = !1, b(a))
+                }, onLoad: a.onLoad, defer: a.defer, async: a.async, crossorigin: a.crossOrigin
+            })
+        },
+        g.device = {
+            retina: window.devicePixelRatio >= 1.5, sticky: function () {
+                var a, b = "-webkit-sticky", c = document.createElement("i");
+                return c.style.position = b, a = c.style.position, c = null, a === b
+            }(), scene: function () {
+                var a = navigator.userAgent.toLowerCase();
+                return a.indexOf("micromessenger") > -1 ? "weixin" : /qq\/([\d\.]+)*/.test(a) ? "qq" : /jzyc\/\d\.\d/.test(a) ? "jzyc" : /jxj\/([.\d])*/.test(a) ? "jxj" : "mobile"
+            }(), webp: !1, getNetwork: function (a) {
+                try {
+                    var b = g.cookie.get("network");
+                    if (b)return a(b);
+                    "qq" == this.scene ? mqq.device.getNetworkType(function (b) {
+                        switch (1 * b) {
+                            case 0:
+                                nt = b;
+                                break;
+                            case 1:
+                                nt = "wifi";
+                                break;
+                            case 2:
+                                nt = "2G";
+                                break;
+                            case 3:
+                                nt = "3G";
+                                break;
+                            case 4:
+                                nt = "4G"
+                        }
+                        g.cookie.set("network", nt, 2, "/", "jd.com"), a(nt)
+                    }) : "weixin" == this.scene ? (console.log("head getNetworkType "), wx.getNetworkType({
+                        success: function (b) {
+                            console.log(b.networkType);
+                            var c = b.networkType;
+                            /wifi/i.test(c) ? c = "wifi" : /4g|3g+/i.test(c) ? c = "4g" : /3g/i.test(c) ? c = "3g" : /2g/i.test(c) && (c = "2g"), console.log(c), g.cookie.set("network", c, 2, "/", "jd.com"), a(c)
+                        }, fail: function () {
+                            a("unknown")
+                        }
+                    })) : a("unknown")
+                } catch (c) {
+                    a("unknown")
+                }
+            }
+        },
+        g.performance = {
+            useScaleImg: function () {
+                var a = g.cookie.get("network"), b = g.device.retina;
+                return "wifi" != a || !b
+            }, getScaleImg: function (a, b) {
+                var c = g.cookie.get("network"), d = "2G" == c || "3G" == c;
+                b = b || (d ? 60 : 80);
+                var e = a;
+                if (/(m|img\d{2})\.360buyimg\.com/.test(a) && /\.(jpg|jpeg|png)$/.test(a) && (/jfs\//.test(a) || /com\/n\d{1,2}\//.test(a)) && (g.device.webp ? e = a + (d ? "!q" + b + ".jpg.webp" : ".webp") : /\.(jpg|jpeg)$/.test(a) && (e = a + "!q" + b + ".jpg"), h.length)) {
+                    var f = e.match(/img\d{2}\.360buyimg\.com/)[0];
+                    h.indexOf(f) > -1 && (e = e.replace(f, g.url.getValidImageDomain()))
+                }
+                return e ? e.replace(/^http:/, "") : ""
+            }
+        },
+        g.img = {
+            useScaleImg: g.performance.useScaleImg,
+            getScaleImg: g.performance.getScaleImg,
+            getImgUrl: function (a, b, c, d) {
+                if (!/(m|img\d{2})\.360buyimg\.com/.test(a) || !/\.(jpg|jpeg|png|webp)$/.test(a) || !/jfs\//.test(a))return a ? a.replace(/^http:/, "") : "";
+                if (!b && !c)return this.getScaleImg(a, d);
+                b && !c && (c = b), !b && c && (b = c);
+                var e = /\/s\d{1,3}x\d{1,3}_jfs\//.test(a);
+                return a = e ? a.replace(/\/s\d{1,3}x\d{1,3}_jfs\//, "/s" + b + "x" + c + "_jfs/") : a.replace(/\/jfs\//, "/s" + b + "x" + c + "_jfs/"), this.getScaleImg(a, d)
+            }
+        },
+        g.report = {
+            itil: function () {
+                return !1
+            }, rd: function (a) {
+                function b() {
+                    if (d.length) {
+                        var a = d.shift();
+                        c(a), setTimeout(b, 30)
+                    }
+                }
+
+                function c(a) {
+                    a && (a = "[object Object]" == {}.toString.call(a) ? a : {ptag: a}, window.ja.trace(a), ECC.cloud.report.trace(a))
+                }
+
+                var d;
+                !this._rdList && (this._rdList = []), window.ECC_cloud_report_pv ? (c(a), d = this._rdList, b()) : this._rdList.push(a)
+            }, badJs: function (a) {
+                var b = new Image;
+                a && a.stack ? a = a.stack.toString() : "object" == typeof a && window.JSON && window.JSON.stringify && (a = JSON.stringify(a)), b.src = "http://wq.jd.com/webmonitor/collect/badjs.json?Content=" + a + "&t=" + Math.random()
+            }, umpBiz: function (a) {
+                var b, c = window.GLOBAL_UMP_PERCENT;
+                if (void 0 !== c && Math.floor(10 * Math.random()) > c)return !1;
+                if (a instanceof Array) {
+                    b = [];
+                    for (var d = 0; d < a.length; d++)b.push(a.bizid + "|" + a.operation + "|" + a.result + "|" + a.source + "|" + encodeURIComponent(a.message.replace(/,/g, " ")));
+                    b = b.join(",")
+                } else b = a.bizid + "|" + a.operation + "|" + a.result + "|" + a.source + "|" + encodeURIComponent(a.message.replace(/,/g, " "));
+                var e = new Image;
+                e.src = "http://wq.jd.com/webmonitor/collect/biz.json?contents=" + b + "&t=" + Math.random()
+            }, imageLoadError: function (a) {
+                if (a && a.src) {
+                    var b = a.src.match(/img(\d{2})\.360buyimg\.com/);
+                    if (b && b.length) {
+                        var c = b[0], d = b[1], e = {10: 1, 11: 2, 12: 3, 13: 4, 14: 5, 20: 6, 30: 7};
+                        if (this.umpBiz({
+                                    bizid: 41,
+                                    operation: 1,
+                                    result: e[d],
+                                    source: 0,
+                                    message: a.src + " load error!"
+                                }), !a.getAttribute("data-reload")) {
+                            var f = g.url.getValidImageDomain(c);
+                            f && (a.src = a.src.replace(c, f), a.setAttribute("data-reload", "1"))
+                        }
+                    }
+                }
+            }
+        },
+        g.cookie = {
+            get: function (a) {
+                var b = new RegExp("(^| )" + a + "(?:=([^;]*))?(;|$)"), c = document.cookie.match(b);
+                return c ? c[2] ? unescape(c[2]) : "" : null
+            }, set: function (a, b, c, d, e, f) {
+                var g = new Date, c = arguments[2] || null, d = arguments[3] || "/", e = arguments[4] || null, f = arguments[5] || !1;
+                c ? g.setMinutes(g.getMinutes() + parseInt(c)) : "", document.cookie = a + "=" + escape(b) + (c ? ";expires=" + g.toGMTString() : "") + (d ? ";path=" + d : "") + (e ? ";domain=" + e : "") + (f ? ";secure" : "")
+            }, del: function (a, b, c, d) {
+                var e = this.get(a);
+                if (null != e) {
+                    var f = new Date;
+                    f.setMinutes(f.getMinutes() - 1e3), b = b || "/", document.cookie = a + "=;expires=" + f.toGMTString() + (b ? ";path=" + b : "") + (c ? ";domain=" + c : "") + (d ? ";secure" : "")
+                }
+            }
+        },
+        g.preload = {},
+        g.url = {
+            setHash: function (a) {
+                setTimeout(function () {
+                    location.hash = a
+                }, 0)
+            },
+            getHash: function (a) {
+                var b = a || location.hash;
+                return b ? b.replace(/.*#/, "") : ""
+            },
+            getHashParam: function (a) {
+                var b = this.getHash().match(new RegExp("(^|&)" + a + "=([^&]*)(&|$)"), "i");
+                return null != b ? b[2] : ""
+            },
+            getUrlParam: function (a) {
+                var b = arguments[1] || window.location.search, c = new RegExp("(^|&)" + a + "=([^&]*)(&|$)", "i"), d = b.substr(b.indexOf("?") + 1).match(c);
+                return null != d ? d[2] : ""
+            },
+            parseUrl: function (a) {
+                var b = document.createElement("a");
+                return b.href = a, {
+                    source: a,
+                    protocol: b.protocol.replace(":", ""),
+                    host: b.hostname,
+                    port: b.port,
+                    query: b.search,
+                    params: function () {
+                        for (var a, c = {}, d = b.search.replace(/^\?/, "").split("&"), e = d.length, f = 0; e > f; f++)d[f] && (a = d[f].split("="), c[a[0]] = a[1]);
+                        return c
+                    }(),
+                    file: (b.pathname.match(/([^\/?#]+)$/i) || [, ""])[1],
+                    hash: b.hash.replace("#", ""),
+                    path: b.pathname.replace(/^([^\/])/, "/$1"),
+                    relative: (b.href.match(/tps?:\/\/[^\/]+(.+)/) || [, ""])[1],
+                    segments: b.pathname.replace(/^\//, "").split("/")
+                }
+            },
+            addRd: function (a, b) {
+                a = a.replace(/？/g, "?");
+                var c = /ptag[=,]\d+\.\d+\.\d+/i, d = /\?/.test(a);
+                return hasAnchor = a.indexOf("#") > -1, a = c.test(a) ? a.replace(c, "PTAG=" + b) : hasAnchor ? a.replace("#", (d ? "&" : "?") + "PTAG=" + b + "#") : a + (d ? "&" : "?") + "PTAG=" + b
+            },
+            smartboxUrl: "http://wq.360buyimg.com/js/common/dest/jd.smartbox.min.js?t=201511261630",
+            getValidImageDomain: function (a) {
+                var b = ["img10.360buyimg.com", "img11.360buyimg.com", "img12.360buyimg.com", "img13.360buyimg.com", "img14.360buyimg.com", "img20.360buyimg.com", "img30.360buyimg.com"], c = h.concat();
+                a && -1 == c.indexOf(a) && c.push(a);
+                var d = b.filter(function (a) {
+                    return -1 == c.indexOf(a)
+                });
+                return d.length ? d[Math.floor(Math.random() * d.length)] : ""
+            }
+        },
+        g.events = function () {
+            var a, b, c, d, e, f;
+            return b = {}, f = this, a = function (a, c) {
+                var d, e;
+                return d = null != (e = b[a]) ? e : b[a] = [], d.push(c)
+            }, c = function (b, c) {
+                return d(b), a(b, c)
+            }, d = function (a) {
+                var c;
+                return null != (c = b[a]) ? c.length = 0 : void 0
+            }, e = function () {
+                var a, c, d, e, g, h;
+                for (h = Array.prototype.shift.call(arguments), c = null != (g = b[h]) ? g : b[h] = [], d = 0, e = c.length; e > d; d++)if (a = c[d], a.apply(f, arguments) === !1)return !1
+            }, {listen: a, one: c, remove: d, trigger: e}
+        }(),
+        g.sqapi = function () {
+            var a = "sq_api_ready";
+            return {
+                ready: function (b) {
+                    window.mqq ? b && b.call(null) : g.events.listen(a, b)
+                }
+            }
+        }(),
+        g.wxapi = function () {
+            if ("weixin" == g.device.scene) {
+                var a, b = "wx_api_ready", c = "wx_cfg_init", d = "wx_api_error", e = "wx_js_load", f = "wx_sign_get", h = !1;
+                return funcs = [], initSdkCofig = function () {
+                    a && window.wx && g.events.trigger(c, a)
+                }, {
+                    ready: function (c, i, j) {
+                        if (i) {
+                            a && (a = null);
+                            var k = function () {
+                                g.events.trigger(f, !0)
+                            };
+                            window.wx ? k() : g.events.listen(e, k)
+                        }
+                        a && window.wx && h ? c && c.call(null, a) : c && g.events.listen(b, c), j && g.events.listen(d, j)
+                    }, signatureReady: function (b) {
+                        a = b, initSdkCofig()
+                    }, getSignature: function () {
+                        return a
+                    }, jsReady: function (a) {
+                        g.events.listen(c, a), g.events.trigger(e), g.events.remove(e), initSdkCofig()
+                    }, wxReady: function () {
+                        h = !0
+                    }
+                }
+            }
+        }(),
+        g.calendar = {},
+        g.GLOBAL_CONFIG = {
+            CK_GQP: "_ws_nav_gwq",
+            CK_HOMEPAGE: "_ws_home",
+            CK_WX_CURTAINAD: "curtainAdShow",
+            CK_SQ_FOOT_AD: "ckfootAdShow",
+            CK_SQ_HOMEPAGE: "qqmobile_homepage",
+            CK_NETWORK: "network",
+            CK_RETINA: "retina",
+            CK_CID: "cid",
+            CK_WEBP: "webp",
+            CK_TIPSKEY: "jd_newversion_062021",
+            EVENT_SQ_FOOT: "e_s_f",
+            EVENT_WX_FOOT: "e_w_f"
+        },
+        g.log = function () {
+            var a = [];
+            return {
+                add: function (b) {
+                    a.push(b)
+                }, get: function () {
+                    return a
+                }
+            }
+        }(),
+        g.disasterRecovery = function () {
+            function a(a) {
+                switch (a) {
+                    case"mart":
+                        return window._page_cgi_static_mart === !0;
+                    case"cpt":
+                        return window._page_cgi_static_cpt === !0;
+                    case"cpc":
+                        return window._page_cgi_static_cpc === !0;
+                    case"mportal":
+                        return window._page_cgi_static_mportal === !0;
+                    case"materialQuery":
+                        return window._page_cgi_static_materialQuery === !0;
+                    case"multiMart":
+                        return window._page_cgi_static_multiMart === !0
+                }
+                return !0
+            }
+
+            var b = g.cookie.get("visitkey"), c = function (a) {
+                return Math.floor(Math.random() * a)
+            }, d = {}, e = g.cookie.get("whitetag"), f = window._cgiDisasterRecovery ? window._cgiDisasterRecovery[0].whitelist.replace(/\s*/g, "").split(",") : [], h = g.cookie.get("wq_uin");
+            return window._cgiDisasterRecovery && window._cgiDisasterRecovery.forEach(function (g) {
+                var i = 1 * g.percent, j = b ? i > b % 10 : c(10) < i, k = "1" == e || h && f.indexOf(h) > -1 || j || a(g.cgikey);
+                d[g.cgikey] = {percent: i, useStaticUrl: k}
+            }), d
+        }(), b(), d(), e(), f(), c(), window[a] = g
+    }("JD");
+</script>
+
+<script>
+    window.closeSearchEntrance = false;  //控制smartbox是否展示(容灾用)
+    window.smartboxGrayStrategy = 99;  //smartbox灰度百份比(灰度到直出版,99全量)
+    window._useStaticItemLink = false;  //true切换商详静态版
+    window._staticItemLinkRate = 10;//0-10,0表示不切静态版，10表示100%为静态版
+    window._loadCoupon = true;  //false不加载优惠券  -- 商祥用
+    window._loadYanbao = true;  //false不加载延保  -- 商祥用
+    window._searchWhiteList = '357661421|93219600|88528398|44668570|497195833|1066176|404139319|394757186|263096207|1507902953|15608209';  //搜索用灰度白名单
+    function getItemLink(str, ptag) {
+        var link = str;
+        if (parseInt(str) == str) { //传入sku,链接生成
+            var linkpre = 'http://wq.jd.com/item/view?sku=';
+            if (window._useStaticItemLink) {  //容灾开关(切换到wqs版本)
+                linkpre = 'http://wqs.jd.com/item/jd.shtml?sku=';
+            }
+            link = linkpre + str;
+        } else { //传入链接,容灾转换
+            if (window._useStaticItemLink) {
+                link = link.replace("http://wq.jd.com/item/view", "http://wqs.jd.com/item/jd.shtml");
+            }
+        }
+        return ptag ? (link + '&ptag=' + ptag) : link;
+    }
+</script>
+
+<script>
+    window.wxPayDomain = '//wqs.jd.com/';
+    window.jdDomian01 = '//wei.jd.com/deal/';
+    (function () {
+        try {
+            var isWhiteLIstToBJ = false,
+                    whiteList = ['2354805240', '1596161890', '4663256091x', '404645486x'],
+                    toSZRate = 0;
+            var getCookie = JD.cookie.get;
+
+            function isPageOfHeYueOrPingou() {
+                var u = window.location.href, r = /(view=pingou)/i;
+                return r.test(u)
+            }
+
+            var uin = getCookie("wq_uin") || getCookie("wg_uin"), visitkey = getCookie("visitkey"), tmp = (uin || "0").substr(-2), sk = parseInt(tmp), pin = getCookie("pin") || getCookie("jdpin"), isV2, dateBase, rateMax, rate2 = false, ua = navigator.userAgent, isJZEC = false;
+            if (getCookie("cid") == 4 || /JZYC/.test(ua)) {
+                isJZEC = true
+            }
+            dateBase = (new Date().getDate() % 10) * 10;
+            rateMax = dateBase + toSZRate;
+            if (rateMax > 100) {
+                if (sk) {
+                    rate2 = sk < (rateMax - 100)
+                }
+                rateMax = 100
+            }
+            isV2 = (toSZRate == 0) || !sk || !(toSZRate && sk && ((sk >= dateBase && sk < rateMax) || rate2));
+            if ((isV2 && !isPageOfHeYueOrPingou()) || isJZEC) {
+                window.jdDomian01 = "//wq.jd.com/";
+                if (location.href.indexOf("//wq.jd.com/item/jd") == 0 || location.href.indexOf("//wq.jd.com/item/view") == 0) {
+                    window.jdDomian01 = "//wq.jd.com/deal/"
+                }
+            }
+            if ((uin && whiteList.indexOf(uin) > -1) || (pin && whiteList.indexOf(pin) > -1)) {
+                if (isWhiteLIstToBJ && !isPageOfHeYueOrPingou()) {
+                    window.jdDomian01 = "//wq.jd.com/";
+                    if (/\/item\/jd\d?\.shtml|item\/view/.test(location.href)) {
+                        window.jdDomian01 = "//wq.jd.com/deal/"
+                    }
+                } else {
+                    window.jdDomian01 = "//wei.jd.com/deal/"
+                }
+            }
+            window.buyLink = window.wxPayDomain + "order/wq.confirm.shtml";
+            window._setGrayByUin = function () {
+                var i, l, gray, mlist = this.gray;
+                for (i = 0, l = mlist.length; i < l; i++) {
+                    gray = mlist[i];
+                    if (gray.rate == 99 || (uin && (gray.whiteList.indexOf(uin) > -1 || uin.substr(-2) <= gray.rate)) || (pin && gray.whiteList.indexOf(pin) > -1)) {
+                        this[gray.targetName] = gray.cgi
+                    }
+                }
+            };
+        } catch (e) {
+            console.log("下单页灰度出错：" + e);
+        }
+    })();
+</script>
+
+
+<!--WEBPAGEBEGIN@6178-->
+<script>var wx_portal_ad_tong = [
+    {
+        "link": "http://wqs.jd.com/promote/2015/1111/strategy_wx.shtml?PTAG=37124.15.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t2539/68/23644384/27281/af013835/56330036N98692a13.jpg",
+        "startTime": "2015/11/02 00:00:00",
+        "endTime": "2015/11/02 23:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/double11guide/hundredbrands.shtml?PTAG=37124.15.2",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t1951/128/909371339/25058/7b4bc6a6/563332c5Nb4df0cae.jpg",
+        "startTime": "2015/11/01 09:00:00",
+        "endTime": "2015/11/01 23:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/1111/strategy_wx.shtml?PTAG=37124.15.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t2227/191/902570723/26111/9034fe2b/56330030N5df7a5f6.jpg",
+        "startTime": "2015/11/01 13:00:00",
+        "endTime": "2015/11/01 23:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/double11guide/hundredbrands.shtml?PTAG=37124.15.2",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t2395/166/949802555/23884/3d356d18/5635a339Na50c465f.jpg",
+        "startTime": "2015/11/02 00:00:00",
+        "endTime": "2015/11/02 23:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/1111/strategy_wx.shtml?PTAG=37124.15.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t2224/210/876745358/27373/8015173f/5633003bN936f993c.jpg",
+        "startTime": "2015/11/03 00:00:00",
+        "endTime": "2015/11/03 23:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/1111/strategy_wx.shtml?PTAG=37124.15.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t2557/125/146054376/25356/ad69a21a/563979a3Ncf223c48.jpg",
+        "startTime": "2015/11/04 00:00:00",
+        "endTime": "2015/11/04 23:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/1111/strategy_wx.shtml?PTAG=37124.15.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t2221/194/910507825/27135/2042bf67/56330045N995011fb.jpg",
+        "startTime": "2015/11/05 00:00:00",
+        "endTime": "2015/11/05 23:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/1111/strategy_wx.shtml?PTAG=37124.15.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t2053/193/916327835/26987/db879aef/5633004eN271ce228.jpg",
+        "startTime": "2015/11/06 00:00:00",
+        "endTime": "2015/11/06 23:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/1111/strategy_wx.shtml?PTAG=37124.15.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t2425/198/913426178/27919/ad5ebc70/56330062Nb66d54fc.jpg",
+        "startTime": "2015/11/07 00:00:00",
+        "endTime": "2015/11/07 23:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/1111/strategy_wx.shtml?PTAG=37124.15.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t2440/209/886088538/29050/e050196e/5633006dN9e94a8e9.jpg",
+        "startTime": "2015/11/08 00:00:00",
+        "endTime": "2015/11/08 11:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/1111/strategy_wx.shtml?PTAG=37124.15.3",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t1993/220/882753760/28563/5c2e30ef/56330070N1e594152.jpg",
+        "startTime": "2015/11/08 12:00:00",
+        "endTime": "2015/11/08 23:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/double11guide/hundredbrands.shtml?PTAG=37124.15.2",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t2395/278/905400174/25212/6ef9962d/56330b8bN3e996cb4.jpg",
+        "startTime": "2015/11/03 00:00:00",
+        "endTime": "2015/11/03 23:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/double11guide/hundredbrands.shtml?PTAG=37124.15.2",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t2116/282/887908644/25074/e570489d/56330b8eN8148af02.jpg",
+        "startTime": "2015/11/04 00:00:00",
+        "endTime": "2015/11/04 23:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/double11guide/hundredbrands.shtml?PTAG=37124.15.2",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t2224/327/932203562/26424/824c4fa6/56330b95N8f32a108.jpg",
+        "startTime": "2015/11/05 00:00:00",
+        "endTime": "2015/11/05 23:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/double11guide/hundredbrands.shtml?PTAG=37124.15.2",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t1906/253/904257515/27083/b2bfdf0a/56330ba4Nc5014505.jpg",
+        "startTime": "2015/11/06 00:00:00",
+        "endTime": "2015/11/06 23:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/double11guide/hundredbrands.shtml?PTAG=37124.15.2",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t1891/299/921616089/26352/41d15dfc/56330ba8Nadc922fa.jpg",
+        "startTime": "2015/11/07 00:00:00",
+        "endTime": "2015/11/07 23:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/double11guide/hundredbrands.shtml?PTAG=37124.15.2",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t2422/292/891053398/24246/8cd21a4d/56330babNcb47c7dd.jpg",
+        "startTime": "2015/11/08 00:00:00",
+        "endTime": "2015/11/08 23:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/double11guide/hundredbrands.shtml?PTAG=37124.15.2",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t2035/327/917240691/24634/d4d20f99/56330bafN26f62b82.jpg",
+        "startTime": "2015/11/09 00:00:00",
+        "endTime": "2015/11/09 23:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/double11guide/hundredbrands.shtml?PTAG=37124.15.2",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t2092/315/909198812/25455/b934a247/56330bb3N3d6e8322.jpg",
+        "startTime": "2015/11/10 00:00:00",
+        "endTime": "2015/11/10 23:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/1111/strategy_wx.shtml?PTAG=37124.15.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t2368/298/1026250077/24632/f3b87a7b/564004f8N6a82b0d8.jpg",
+        "startTime": "2015/11/09 00:00:00",
+        "endTime": "2015/11/09 23:59:59",
+        "needLogin": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/2015/1111/strategy_wx.shtml?PTAG=37124.15.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x258_jfs/t2527/120/34236303/26845/eb10f44f/56330081Nffd635b1.jpg",
+        "startTime": "2015/11/10 00:00:00",
+        "endTime": "2015/11/10 23:59:59",
+        "needLogin": "1"
+    }
+
+
+];</script>
+<!--WEBPAGEEND@6178-->
+<script type="text/javascript">
+    window.GLOBAL_WX_PORAL_PAGE = true;
+    if (!window.localStorage.getItem("showold")) {
+        window.GLOBAL_INIT_HEADER_FEN = true;
+    }
+    ;
+</script>
+<div class="WX_msg_bar" id="yxHead" style="display: none"></div>
+<!--顶部搜索框-->
+<div id="topsearchbar" class="wx_search wx_search_chanel_mode fixed" data-switchstyle="1" data-homepage="1"
+     data-hotrd="37670.9.1" data-searchrd="37787.1.5" data-placeholder="">
+    <div class="wx_search_inner">
+        <div class="wx_bar_cate">
+            <span id="__cate" ptag="37787.1.3" class="icon_cate"></span>
+        </div>
+        <form action="" method="get" class="wx_search_form" onsubmit="return false;">
+            <input name="key" class="wx_search_txt" placeholder="" ptag="37787.1.5" type="search" id="topSearchTxt"
+                   autocomplete="off">
+            <a class="wx_search_clear" href="javascript:;" id="topSearchClear" style="display: none;">x</a>
+        </form>
+        <div class="wx_search_act">
+            <a href="javascript:;" class="wx_search_pt" id="topCurtainBtn" style="display:none"></a>
+            <a href="javascript:;" id="topSearchbtn" class="wx_search_ov" style="display:none"></a>
+            <span id="topSearchCbtn" class="wx_search_btn" style="display:none">取消</span>
+        </div>
+    </div>
+
+</div>
+
+<div id="navContainer"></div>
+
+<!-- S幕帘广告 -->
+<div id="bigShow1" style="display:none">
+    <div class="wx_bar_guide_area_1">
+        <div class="wx_pop_bnr_box_1">
+            <div class="close"></div>
+            <div class="con" id="bigShow1Inner">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--WEBPAGEBEGIN@5557-->
+<script>var wx_curtainad = [
+
+    {
+        "link": "//poplist.m.jd.com/?PTAG=37124.14.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s473x453_jfs/t1942/21/1072291042/37593/d25b48d5/5640a611N27e35483.png",
+        "urlImg2": "http://img11.360buyimg.com/jdphoto/s60x60_jfs/t1975/199/1170003238/4756/98647cfc/5640a616N274b213a.jpg",
+        "startTime": "2015/11/10 10:00:00",
+        "endTime": "2015/11/10 15:59:59",
+        "check": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/event/brand/jxyhd/index.shtml?PTAG=37124.14.2",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s640x462_jfs/t1933/264/1056303417/38682/314e8c85/564197c8N05263d44.png",
+        "urlImg2": "http://img11.360buyimg.com/jdphoto/s60x60_jfs/t1981/280/1059056359/4485/2a7a8823/564197d2N10fdf483.png",
+        "startTime": "2015/11/10 16:00:00",
+        "endTime": "2015/11/10 20:59:59",
+        "check": ""
+    }
+    ,
+
+    {
+        "link": "http://poplist.m.jd.com/?PTAG=37124.14.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s473x453_jfs/t1942/21/1072291042/37593/d25b48d5/5640a611N27e35483.png",
+        "urlImg2": "http://img11.360buyimg.com/jdphoto/s60x60_jfs/t1975/199/1170003238/4756/98647cfc/5640a616N274b213a.jpg",
+        "startTime": "2015/11/10 21:00:00",
+        "endTime": "2015/11/10 23:00:00",
+        "check": ""
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/event/brand/womanbrand/index.shtml?PTAG=37124.14.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s600x450_jfs/t2500/281/1233372076/58938/d50f8404/5645ab32N3b8833ae.png",
+        "urlImg2": "http://img11.360buyimg.com/jdphoto/s60x60_jfs/t1897/352/1147972720/4234/6171a480/5645ac48N6c9c92f9.jpg",
+        "startTime": "2015/11/16 08:00:00",
+        "endTime": "2015/11/16 23:59:59",
+        "check": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/event/brand/womanbrand/index.shtml?PTAG=37124.14.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s600x450_jfs/t2413/307/1104017466/32811/30513762/5645ac4dN52edc0a5.png",
+        "urlImg2": "http://img11.360buyimg.com/jdphoto/s60x60_jfs/t2128/121/1096248640/4557/68489ba4/5645ab3fN1f8e9886.jpg",
+        "startTime": "2015/11/17 00:00:00",
+        "endTime": "2015/11/17 23:59:59",
+        "check": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/portal/wx/gentleman/index.shtml?PTAG=37124.14.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s600x450_jfs/t2572/180/439401868/174747/4c2261f9/564c3a3bNdfdd667d.png",
+        "urlImg2": "http://img11.360buyimg.com/jdphoto/s60x60_jfs/t2428/12/1284800873/4692/65602fad/564c3a3eNe6300a65.jpg",
+        "startTime": "2015/11/19 00:00:00",
+        "endTime": "2015/11/19 23:59:59",
+        "check": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/201510/digitalfestival/index0.shtml?PTAG=37124.14.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s600x450_jfs/t2578/143/458138870/38917/b70251ed/564d84b9Nb27edc82.png",
+        "urlImg2": "http://img11.360buyimg.com/jdphoto/s60x60_jfs/t2083/44/1200439189/3039/4658788d/564d84bcNeb47d0fe.jpg",
+        "startTime": "2015/11/20 00:00:00",
+        "endTime": "2015/11/20 23:59:59",
+        "check": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/event/brand/dpgej1123/index.shtml?PTAG=37124.14.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s600x450_jfs/t1969/176/1303744161/46316/f0e2785b/564ee40aN2091d109.png",
+        "urlImg2": "http://img11.360buyimg.com/jdphoto/s60x60_jfs/t2074/98/1407320528/5255/d5e07054/564ee410Ne91e1614.jpg",
+        "startTime": "2015/11/23 00:00:00",
+        "endTime": "2015/11/23 23:59:59",
+        "check": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/event/brand/ganenfanchangji/index.shtml?PTAG=37124.14.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s600x450_jfs/t2524/325/475875884/27980/d0077e54/564ef156Ne9a4531e.png",
+        "urlImg2": "http://img11.360buyimg.com/jdphoto/s60x60_jfs/t2407/34/1372747930/5047/4fdbf531/564ef125Nd8766526.jpg",
+        "startTime": "2015/11/21 00:00:00",
+        "endTime": "2015/11/26 23:59:59",
+        "check": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/201511/blackfriday/mall.shtml?PTAG=37124.14.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s600x450_jfs/t2527/260/610647068/33813/77c6eba5/5658209eN198bf4db.png",
+        "urlImg2": "http://img11.360buyimg.com/jdphoto/s60x60_jfs/t2560/351/582671462/5600/15fb1c40/565820a2N2562ba04.jpg",
+        "startTime": "2015/11/28 00:00:00",
+        "endTime": "2015/11/28 23:59:59",
+        "check": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/promote/201511/blackfriday/mall.shtml?PTAG=37124.14.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s600x450_jfs/t2308/53/1429640632/22155/29d56c28/565820a6Nea083358.png",
+        "urlImg2": "http://img11.360buyimg.com/jdphoto/s60x60_jfs/t2566/355/609632230/4675/34a92e36/565820a9N43a85b24.jpg",
+        "startTime": "2015/11/29 00:00:00",
+        "endTime": "2015/11/29 23:59:59",
+        "check": "1"
+    }
+    ,
+
+    {
+        "link": "http://wqs.jd.com/event/xin/huaweiMate8shoufa/index.shtml?PTAG=37124.14.1",
+        "urlImg1": "http://img11.360buyimg.com/jdphoto/s600x450_jfs/t2224/281/1326471240/31526/e9830367/56582d99N0bec17f7.png",
+        "urlImg2": "http://img11.360buyimg.com/jdphoto/s60x60_jfs/t2473/216/1437414190/5386/157a9bff/56582d9bNf40fb4f0.jpg",
+        "startTime": "2015/11/30 00:00:00",
+        "endTime": "2015/11/30 23:59:59",
+        "check": "1"
+    }
+
+
+];</script>
+<!--WEBPAGEEND@5557-->
+<!-- E幕帘广告 -->
+
+<script type="text/javascript">
+    window.speedTimePoint && (speedTimePoint[9] = new Date());//342
+</script>
+<div class="wx_side_menu">
+    <div class="mod_alert_mask"></div>
+    <div class="menu_box">
+        <div class="inner">
+            <div class="menu_hd">
+            </div>
+            <div class="menu_bd" class="menu_bd stopmove" id="yScroll1"
+                 style="display:none;overflow:hidden;position:absolute">
+                <div class="menu_list" style="display:none;">
+                    <!--WEBPAGEBEGIN@6431-->
+                    <div class="item" data-href="//wq.jd.com/mcoss/mportal/show?tabid=12&tpl=12&PTAG=37080.12.2"
+                         data-dis="" data-strong=""><i class="icon_m"
+                                                       style="background: url(//img11.360buyimg.com/jdphoto/s40x40_jfs/t1072/232/643107197/1395/df47e911/5538d952N8e6a4676.png) no-repeat; background-size: 100%;"></i>京东超市<span
+                            class="new" style="display:none"></span><span class="hot" style="display:none"></span></div>
+                    <div class="item" data-href="//wqs.jd.com/portal/wx/jiadianguan.shtml?PTAG=37080.12.3" data-dis=""
+                         data-strong=""><i class="icon_m"
+                                           style="background: url(//img11.360buyimg.com/jdphoto/s40x40_jfs/t901/38/652412697/1088/b8a1f61b/5538d949N70218103.png) no-repeat; background-size: 100%;"></i>家电馆<span
+                            class="new" style="display:none"></span><span class="hot" style="display:none"></span></div>
+                    <div class="item" data-href="//wqs.jd.com/event/phone/sjtxv2/shouji/sj1.shtml?PTAG=37080.12.13"
+                         data-dis="new" data-strong=""><i class="icon_m"
+                                                          style="background: url(//img11.360buyimg.com/jdphoto/s40x40_jfs/t2026/200/1447069196/1568/64e00bbf/5656cc06N9ba4b039.jpg) no-repeat; background-size: 100%;"></i>手机馆<span
+                            class="new" style="display:none"></span><span class="hot" style="display:none"></span></div>
+                    <div class="item" data-href="//wqs.jd.com/portal/wx/lady/lady.shtml?PTAG=37080.12.11" data-dis=""
+                         data-strong=""><i class="icon_m"
+                                           style="background: url(//img11.360buyimg.com/jdphoto/s40x40_jfs/t1837/30/91960562/1681/d6dd31cb/55ee3869Na07bc98c.png) no-repeat; background-size: 100%;"></i>女装馆<span
+                            class="new" style="display:none"></span><span class="hot" style="display:none"></span></div>
+                    <div class="item" data-href="//wqs.jd.com/portal/wx/gentleman/index.shtml?PTAG=37080.12.12"
+                         data-dis="new" data-strong=""><i class="icon_m"
+                                                          style="background: url(//img11.360buyimg.com/jdphoto/s40x40_jfs/t2170/5/1081405605/1759/56899f39/563c401aN9d51774d.png) no-repeat; background-size: 100%;"></i>男装馆<span
+                            class="new" style="display:none"></span><span class="hot" style="display:none"></span></div>
+                    <div class="item" data-href="//wqs.jd.com/portal/wx/yundongguan.shtml?PTAG=37080.12.4" data-dis=""
+                         data-strong=""><i class="icon_m"
+                                           style="background: url(//img11.360buyimg.com/jdphoto/s40x40_jfs/t1063/27/661419772/1669/6ff61fa/5538d957Ndf326e58.png) no-repeat; background-size: 100%;"></i>运动馆<span
+                            class="new" style="display:none"></span><span class="hot" style="display:none"></span></div>
+                    <div class="item" data-href="//wq.jd.com/mcoss/mportal/show?tpl=15&tabid=14&PTAG=37080.12.5"
+                         data-dis="" data-strong=""><i class="icon_m"
+                                                       style="background: url(//img11.360buyimg.com/jdphoto/s40x40_jfs/t751/100/1378588789/1635/455930a8/5538d961N680d0208.png) no-repeat; background-size: 100%;"></i>首发<span
+                            class="new" style="display:none"></span><span class="hot" style="display:none"></span></div>
+                    <div class="item" data-href="//wq.jd.com/mcoss/mportal/show?tpl=14&tabid=5&PTAG=37080.12.6"
+                         data-dis="" data-strong="1"><i class="icon_m"
+                                                        style="background: url(//img11.360buyimg.com/jdphoto/s40x40_jfs/t817/363/678234978/1370/3be55859/5538d945N21482b1e.png) no-repeat; background-size: 100%;"></i>品牌<span
+                            class="new" style="display:none"></span><span class="hot" style="display:none"></span></div>
+                    <div class="item" data-href="//wq.jd.com/mcoss/mportal/show?tabid=9&tpl=9&PTAG=37080.12.7"
+                         data-dis="" data-strong=""><i class="icon_m"
+                                                       style="background: url(//img11.360buyimg.com/jdphoto/s40x40_jfs/t925/297/578435459/1529/4e89c4c7/5538d94eN83c7f182.png) no-repeat; background-size: 100%;"></i>特价<span
+                            class="new" style="display:none"></span><span class="hot" style="display:none"></span></div>
+                    <div class="item" data-href="//wqs.jd.com/portal/wx/category_m.shtml?PTAG=37080.12.9" data-dis=""
+                         data-strong=""><i class="icon_m"
+                                           style="background: url(//img11.360buyimg.com/jdphoto/s40x40_jfs/t1162/236/1270001930/571/d2b27ace/558cf6e2N3028b55a.png) no-repeat; background-size: 100%;"></i>全部商品分类<span
+                            class="new" style="display:none"></span><span class="hot" style="display:none"></span></div>
+                    <!--WEBPAGEEND@6431-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wx_bar_guide_area" style="display:none">
+    <div class="wx_guide_box">
+        <div class="step_new">
+            <span class="box_1"></span>
+            <span class="box_2"></span>
+            <span class="box_3"></span>
+            <a href="javascript:;" class="box_4">马上体验</a>
+        </div>
+    </div>
+</div>
+
+<div id="smartboxBlock"></div>
+<script type="text/javascript">
+    window.speedTimePoint && (speedTimePoint[10] = new Date());//342
+</script>
+<script>
+
+</script>
+<script type="text/javascript">
+    window.speedTimePoint && (speedTimePoint[11] = new Date());//342+
+    (function () {
+        JD.calendar && JD.calendar.ISZHONGQIU && ( document.getElementById("topsearchbar").className = document.getElementById("topsearchbar").className + ' wx_search_zhongqiu');
+
+    })();
+</script>
+
+<div class="wx_wrap">
+    <div class="wet_section">
+
+        <!-- wet_bnr /广告 -->
+        <div class="wet_window">
+            <div class="wet_slider" id="divTopBanner">
+                <div class="list">
+
+
+                    <div class="item">
+                        <a href="http://wqs.jd.com/event/3c/sjtx/s1.shtml?PTAG=37787.2.1&DAP=6469902589493811022:844710721561844271:10:490711&pps=focus.0000000a030003%3A00077cd7000170f000001a1400000984%3A%3A630014"
+                           class="url">
+                            <img src="http://img14.360buyimg.com/focus/jfs/t2215/32/1459796779/42441/79a17fd7/56583564Nd915aa99.jpg.webp"
+                                 alt="" onload="firstImgLoaded();">
+                        </a>
+                    </div>
+
+
+                    <div class="item">
+                        <a href="http://wqs.jd.com/promote/2015/yure/index.html?PTAG=37787.2.2&DAP=6469902589493811022:844710721561844272:10:490708&pps=focus.0000000a030003%3A00077cd4000170f100001a1500000984%3A%3A630014"
+                           class="url">
+                            <img src="http://img11.360buyimg.com/focus/jfs/t2233/5/1371676434/49341/5eff66bb/56583385N11f7c330.jpg.webp"
+                                 alt="" onload="firstImgLoaded();">
+                        </a>
+                    </div>
+
+
+                    <div class="item">
+                        <a href="http://wqs.jd.com/portal/wx/lady/lady.shtml?PTAG=37787.2.3&DAP=6469902589493811022:844710721561844273:10:490703&pps=focus.0000000a030003%3A00077ccf000170b100001a1600000984%3A%3A630014"
+                           class="url">
+                            <img src="http://img12.360buyimg.com/focus/jfs/t2515/187/582561135/47932/d8e0dc13/56582d33Nabe168d2.jpg.webp"
+                                 alt="" onload="firstImgLoaded();">
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="tit_list">
+                    <div class="tit cur" ptag="37787.2.4">钢化膜1元包邮</div>
+                    <div class="tit" ptag="37787.2.5">每满1000减100</div>
+                    <div class="tit" ptag="37787.2.6">京东女装馆</div>
+                </div>
+                <div class="switch">
+                    <div class="bar left"><i class="icon_s_left" ptag="37787.2.7"></i></div>
+                    <div class="bar right"><i class="icon_s_right" ptag="37787.2.7"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wx_com_space size_10 top"></div>
+        <link combofile="mall/s11.shtml" rel="stylesheet"
+              href="http://wq.360buyimg.com/c/=/fd/wx/css/base/wx_mod_bnr.s.min.css,//fd/wx/css/base/wx_s11_dialog.s.min.css?t=1448012519"/>
+        <script type="text/javascript">
+            var ppDoubleDraw = [
+                {
+                    activeName: "0",
+                    isShow: "1",
+                    domImg: "//img11.360buyimg.com/jdphoto/s600x80_jfs/t2269/166/1366724860/20687/e54cd7c1/565bb21fNed8d80b6.png",
+                    curtImg: "",
+                    eweiImg: "http://img11.360buyimg.com/jdphoto/s280x280_jfs/t1843/177/922889288/7286/17555a72/56345d4aN02d2d1bf.png",
+                    word: "即送100元神券"
+                }
+                ,
+
+                {
+                    activeName: "1",
+                    isShow: "1",
+                    domImg: "http://img11.360buyimg.com/jdphoto/s600x80_jfs/t2269/166/1366724860/20687/e54cd7c1/565bb21fNed8d80b6.png",
+                    curtImg: "",
+                    eweiImg: "http://img11.360buyimg.com/jdphoto/s280x280_jfs/t2194/220/891185414/7264/8d5e129f/56345d32N5826e40a.png",
+                    word: "即送100元神券"
+                }
+                ,
+
+                {
+                    activeName: "2",
+                    isShow: "1",
+                    domImg: "http://img11.360buyimg.com/jdphoto/s600x80_jfs/t2269/166/1366724860/20687/e54cd7c1/565bb21fNed8d80b6.png",
+                    curtImg: "",
+                    eweiImg: "http://img11.360buyimg.com/jdphoto/s280x280_jfs/t1972/165/957143933/7265/79911c3f/56345d22Nbb64938b.png",
+                    word: "即送100元神券"
+                }
+                ,
+
+                {
+                    activeName: "3",
+                    isShow: "1",
+                    domImg: "http://img11.360buyimg.com/jdphoto/s600x80_jfs/t2269/166/1366724860/20687/e54cd7c1/565bb21fNed8d80b6.png",
+                    curtImg: "",
+                    eweiImg: "http://img11.360buyimg.com/jdphoto/s280x280_jfs/t1954/186/924000736/7293/a382a638/56345d3cNd9ae878d.png",
+                    word: "即送100元神券"
+                }
+                ,
+
+                {
+                    activeName: "4",
+                    isShow: "1",
+                    domImg: "http://img11.360buyimg.com/jdphoto/s600x80_jfs/t2422/132/1110207125/20643/56133473/56447edcNca4081dd.png",
+                    curtImg: "",
+                    eweiImg: "http://img11.360buyimg.com/jdphoto/s280x280_jfs/t2077/194/913341035/7266/9ad808a9/56345d47Nd80d1479.png",
+                    word: "即送10元神券"
+                }
+                ,
+
+                {
+                    activeName: "5",
+                    isShow: "1",
+                    domImg: "10",
+                    curtImg: "",
+                    eweiImg: "http://img11.360buyimg.com/jdphoto/s280x280_jfs/t1951/365/982685214/7286/8bc0a491/5639795aNd36ef460.png",
+                    word: "即送10元神券"
+                }
+                ,
+
+                {
+                    activeName: "6",
+                    isShow: "1",
+                    domImg: "",
+                    curtImg: "http://img11.360buyimg.com/jdphoto/s640x540_jfs/t2221/73/1393153295/27364/636b3469/565bb17eN3f0f317b.png",
+                    eweiImg: "http://img11.360buyimg.com/jdphoto/s640x814_jfs/t1930/208/1504476320/30587/fe805d0b/565bb1aeNf49d3b69.png",
+                    word: ""
+                }
+
+            ]</script>
+
+        <style type="text/css">
+            .mod_foot_layer {
+                display: none;
+                z-index: 899;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%
+            }
+
+            .mod_foot_layer.show {
+                display: block
+            }
+
+            .mod_foot_layer .inner {
+                width: 240px;
+                margin: 20px auto 0;
+                padding: 15px 0;
+                background: rgba(0, 0, 0, 0.8);
+                color: #fff;
+                -webkit-border-radius: 3px;
+                border-radius: 3px;
+                text-align: center;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin: -120px 0 0 -120px
+            }
+
+            .mod_foot_layer .close {
+                padding: 15px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 2
+            }
+
+            .mod_foot_layer .close:after {
+                content: '\20';
+                display: block;
+                width: 15px;
+                height: 15px;
+                background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAElBMVEX////w8PBkZGRFRUVsbGzNzc3/KSaqAAAAPklEQVQI12MIEWBgYGB0ZXBWBNJCJgxCRgIMjMqKIAxmAwlBIJMBKKAE4gIFjIFcKA0Xh6mD6YOZAzMXZg8Axk0IG3RoOjEAAAAASUVORK5CYII=) no-repeat center;
+                background-size: 7px 7px;
+                -webkit-border-radius: 15px;
+                border-radius: 15px
+            }
+
+            .mod_foot_layer p {
+                font-size: 14px;
+                margin: 8px 0;
+                padding: 0 10px
+            }
+
+            .mod_foot_layer .qr {
+                background: #fff;
+                width: 130px;
+                margin: 0 auto
+            }
+
+            .mod_foot_layer .qr img {
+                display: block;
+                width: 100%
+            }
+
+            .mod_foot_layer .qr span {
+                display: block;
+                width: 100%;
+                height: 30px;
+                line-height: 30px;
+                font-size: 12px;
+                color: #fff;
+                background: #e4393c
+            }
+
+            .mengceng {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 901;
+                background: rgba(0, 0, 0, 0.8);
+                -webkit-transform: translate3D(0, 0, 0);
+            }
+
+            .wx_pop_bnr_box, .wx_pop_bnr_box_1 {
+                top: 40%;
+            }
+        </style>
+
+        <!-- 参数说明：size:高度 pd是否有左右间距-->
+        <div class="wx_com_bnr size_80 pd_10" id="d11Finger" style="display:none;">
+            <div class="item">
+                <a href="javascript:;" class="url">
+                    <img alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="">
+            <div class="mod_foot_layer" id="d11FingerAlert">
+                <div class="inner">
+                    <span class="close"></span>
+
+                    <p id="erweimaword">关注“京东JD.COM”服务号<br>即领10元神券</p>
+
+                    <div class="qr">
+                        <img id="erweima_img">
+                        <span>长按二维码关注</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="">
+            <div class="wx_pop_bnr_box" id="mcDom" style="display:none;">
+                <div class="close" ptag="7238.1.16"></div>
+                <div class="con">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            window.GLOBAL_WX_LAFEN = true;
+        </script>
+
+        <div class="wet_space"></div>
+
+        <!-- app_panel icon 栏 2015/11月1日 之前使用-->
+        <!--WEBPAGEBEGIN@6365-->
+        <script>
+            var ppms_wx_index_app = [
+
+                {
+                    title: "签到",
+                    desc: "每天领1元",
+                    yaoDesc: "",
+                    url: "http://wqs.jd.com/promote/2015/checkin/checkin.html?PTAG=37787.3.1&activitysrc=1"
+                },
+
+                {
+                    title: "摇一摇",
+                    desc: "猜一猜能摇啥",
+                    yaoDesc: "摇10元东券",
+                    url: "http://wqs.jd.com/promote/2015/shake/home.html?PTAG=37787.3.2&sceneid=26015"
+                },
+
+                {
+                    title: "京东会员",
+                    desc: "我的会员特权",
+                    yaoDesc: "",
+                    url: "http://wqs.jd.com/my/vip.shtml?PTAG=37787.3.3"
+                },
+
+                null];
+        </script>
+        <!--WEBPAGEEND@6365-->
+        <div class="wet_app_panel" style="display:none;" id="appPanel">
+            <div class="wet_app_list">
+                <div class="item">
+                    <a href="#" class="url">
+                        <div class="cover"><i class="icon icon_check"></i></div>
+                        <div class="name">签到</div>
+                        <div class="desc"></div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#" class="url">
+                        <div class="cover"><i class="icon icon_yao"></i></div>
+                        <div class="name">摇一摇</div>
+                        <div class="desc"></div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#" class="url">
+                        <div class="cover"><i class="icon icon_gift"></i></div>
+                        <div class="name">新人福利</div>
+                        <span class="dot"></span>
+
+                        <div class="desc"></div>
+                    </a>
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /panel -->
+
+        <!-- app_panel icon 栏 修改于15/10/27  2015/11月1日 之后使用 上面的页面片需要保留-->
+        <script type="text/javascript">
+            var ppmsQuanCenter = [
+                {
+                    weekday: "1",
+                    lqTitle: "领券中心",
+                    lqDesc: "抢美骆世家满399减60",
+                    lqLink: "//wqs.jd.com/my/coupon/coupon_center_wx.html?PTAG=37787.3.4",
+                    lqValue: "60"
+                }
+                ,
+
+                {
+                    weekday: "2",
+                    lqTitle: "领券中心",
+                    lqDesc: "JD.COM粉丝10元专享券",
+                    lqLink: "http://wqs.jd.com/my/coupon/coupon_center_wx.html?PTAG=37787.3.4",
+                    lqValue: "10"
+                }
+                ,
+
+                {
+                    weekday: "3",
+                    lqTitle: "领券中心",
+                    lqDesc: "商超日专享10元全品类券",
+                    lqLink: "http://wqs.jd.com/my/coupon/coupon_center_wx.html?PTAG=37787.3.4",
+                    lqValue: "10"
+                }
+                ,
+
+                {
+                    weekday: "4",
+                    lqTitle: "领券中心",
+                    lqDesc: "京润珍珠满20减10",
+                    lqLink: "http://wqs.jd.com/my/coupon/coupon_center_wx.html?PTAG=37787.3.4",
+                    lqValue: "10"
+                }
+                ,
+
+                {
+                    weekday: "5",
+                    lqTitle: "领券中心",
+                    lqDesc: "三夫户外满399减30",
+                    lqLink: "http://wqs.jd.com/my/coupon/coupon_center_wx.html?PTAG=37787.3.4",
+                    lqValue: "30"
+                }
+                ,
+
+                {
+                    weekday: "6",
+                    lqTitle: "领券中心",
+                    lqDesc: "周末专享全站通用券",
+                    lqLink: "http://wqs.jd.com/my/coupon/coupon_center_wx.html?PTAG=37787.3.4",
+                    lqValue: "20"
+                }
+                ,
+
+                {
+                    weekday: "0",
+                    lqTitle: "领券中心",
+                    lqDesc: "周末专享全站通用券",
+                    lqLink: "http://wqs.jd.com/my/coupon/coupon_center_wx.html?PTAG=37787.3.4",
+                    lqValue: "20"
+                }
+
+            ]</script>
+        <div class="wet_app_panel_v2" style="display:none;">
+            <div class="wet_app_list" id="quanCenter">
+                <div class="item">
+                    <a class="url">
+                        <div class="max_width">
+                            <div class="img_icon">
+                                <span></span>
+                            </div>
+                            <div class="info">
+                                <h3 class="name"></h3>
+
+                                <div class="desc"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="url">
+                        <div class="max_width">
+                            <div class="img_icon"></div>
+                            <div class="info">
+                                <h3 class="name">会员特权</h3>
+
+                                <div class="desc"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- /panel -->
+
+        <div class="wet_space size_s top"></div>
+
+        <div class="wet_bnr "></div>
+
+        <div id="double11"></div>
+
+        <div class="wet_space size_s btm"></div>
+
+        <div class="wet_spe_panel">
+            <div class="spe_span span_l" id="divTejia">
+            </div>
+            <div class="spe_span span_r">
+
+
+                <a href="//wq.jd.com/mcoss/mportal/show?tpl=15&tabid=14&PTAG=37787.4.1&title=%E9%A6%96%E5%8F%91"
+                   class="s_col">
+                    <div class="r_img">
+                        <div class="img_info">
+                            <h3>首发</h3>
+
+                            <div class="img_logo">
+                                荣耀畅玩5X
+                            </div>
+                            <div class="img_des">新品首发</div>
+                        </div>
+
+                        <div class="img">
+                            <img src="http://img12.360buyimg.com/focus/jfs/t2464/89/1390157900/7028/9cc9fda7/56582cdfN51b24437.jpg.webp"/>
+                        </div>
+
+                    </div>
+                </a>
+
+
+                <a href="//wq.jd.com/mcoss/mportal/show?tpl=14&tabid=5&PTAG=37787.4.2&title=%E5%93%81%E7%89%8C"
+                   class="s_col brand_col">
+                    <div class="r_img">
+                        <div class="img_info">
+                            <h3>品牌</h3>
+
+                            <div class="img_logo">
+                                <img src=http://dwz.cn/2bM0ho>
+                            </div>
+                            <div class="img_des">满1000减150</div>
+                        </div>
+
+                        <div class="img">
+                            <img src="http://img11.360buyimg.com/focus/jfs/t1939/266/1339453435/13029/73943852/56581f4aN7f19858b.jpg.webp"/>
+                        </div>
+
+                    </div>
+                </a>
+
+
+                </a>
+
+                <!-- <a href="javascript:;" class="s_col brand_col" id="divBrand">  </a> -->
+
+            </div>
+        </div>
+
+    </div>
+    <!-- /section -->
+    <!--WEBPAGEBEGIN@7831-->
+    <script>   var _floorData = [{
+        logo: "http://img11.360buyimg.com/jdphoto/s44x44_jfs/t1921/105/115831125/3693/301b68e/55efd2deNd3b1f174.png",
+        name: "京东超市",
+        slogan: "真的很快 好的还省",
+        tag: "京东配送",
+        link: "http://wq.jd.com/mcoss/mportal/show?tabid=12&tpl=12&PTAG=37787.8.1",
+        btnText: "进入超市",
+        adId: "3077",
+        style: "wet_shop_panel",
+        rd: "37787.8"
+    }, {
+        logo: "http://img11.360buyimg.com/jdphoto/s44x44_jfs/t1948/336/97718912/3084/88d975a1/55ee8242N1f0f9bc0.png",
+        name: "手机通讯",
+        slogan: "稀缺手机提前抢 快人一步",
+        tag: "京东配送",
+        link: "http://wqs.jd.com/event/phone/sjtxv2/shouji/sj1.shtml?PTAG=37787.10.1",
+        btnText: "进入馆区",
+        adId: "3082",
+        style: "wet_phone_panel",
+        rd: "37787.10"
+    }, {
+        logo: "http://img11.360buyimg.com/jdphoto/s44x44_jfs/t1852/99/121196775/3071/89da7d7f/55efd2d8Nb8bb3930.png",
+        name: "家用电器",
+        slogan: "7天无理由退换 30天价保",
+        tag: "京东配送",
+        link: "http://wqs.jd.com/portal/wx/jiadianguan.shtml?PTAG=37787.9.1",
+        btnText: "进入馆区",
+        adId: "3081",
+        style: "wet_house_panel",
+        rd: "37787.9"
+    }, {
+        logo: "http://img11.360buyimg.com/jdphoto/s44x44_jfs/t2425/260/104344720/3095/923578f5/55ee8245N11f60ac6.png",
+        name: "电脑数码",
+        slogan: "购物0首付 畅享30天免息",
+        tag: "京东配送",
+        link: "http://wqs.jd.com/promote/201505/sjtx/sjtx_ditital_s1.shtml?PTAG=37787.11.1",
+        btnText: "进入馆区",
+        adId: "3083",
+        style: "wet_computer_panel",
+        rd: "37787.11"
+    }];  </script>
+    <!--WEBPAGEEND@7831-->
+    <script type="text/javascript">
+        var floorOrder = [
+            {
+                slogan0: "手机通讯",
+                slogan1: "京东超市",
+                slogan2: "家用电器",
+                slogan3: "电脑数码"
+            }
+            ,
+
+            {
+                slogan0: "京东超市",
+                slogan1: "手机通讯",
+                slogan2: "电脑数码",
+                slogan3: "家用电器"
+            }
+
+        ]</script>
+
+    <div class="wet_space"></div>
+
+    <div id="channelFloor">
+        <div class="wet_pdt_panel" id="channelFloor1">
+            <div class="hd">
+            </div>
+            <div class="info">
+            </div>
+        </div>
+
+        <div class="wet_space"></div>
+
+        <div class="wet_pdt_panel" id="channelFloor2">
+            <div class="hd">
+            </div>
+            <div class="info">
+            </div>
+        </div>
+
+        <div class="wet_space"></div>
+
+        <div class="wet_pdt_panel" id="channelFloor3">
+            <div class="hd">
+            </div>
+            <div class="info">
+            </div>
+        </div>
+
+        <div class="wet_space"></div>
+
+        <div class="wet_pdt_panel" id="channelFloor4">
+            <div class="hd">
+            </div>
+            <div class="info">
+            </div>
+        </div>
+    </div>
+
+    <div class="wet_space"></div>
+
+    <div class="wet_section wet_v2_panel">
+        <div class="wet_mat_panel">
+            <div class="wet_mat_list">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="wet_space"></div>
+
+    <div class="wet_global_panel" id="specialChannel">
+
+    </div>
+
+    <div class="wet_space"></div>
+
+    <!-- /section -->
+    <!--WEBPAGEBEGIN@7139-->
+    <script>
+        var ppms_index_interested = [
+
+            {
+                "id": "655",
+                "desc": "热销手机",
+                "rd": "37787.6.3"
+            },
+
+            {
+                "id": "9719",
+                "desc": "夏装上新",
+                "rd": "37787.6.4"
+            },
+
+            {
+                "id": "5024",
+                "desc": "粮油送到家",
+                "rd": "37787.6.5"
+            },
+
+            {
+                "id": "1602",
+                "desc": "夏日水饮",
+                "rd": "37787.6.6"
+            },
+
+            {
+                "id": "2679",
+                "desc": "必备速食",
+                "rd": "37787.6.7"
+            },
+
+            {
+                "id": "12215",
+                "desc": "进口牛奶",
+                "rd": "37787.6.8"
+            },
+
+            {
+                "id": "7170",
+                "desc": "最爱拍立得",
+                "rd": "37787.6.9"
+            },
+
+            {
+                "id": "759",
+                "desc": "在家当大厨",
+                "rd": "37787.6.10"
+            },
+
+            {
+                "id": "12160",
+                "desc": "沙滩女神",
+                "rd": "37787.6.11"
+            },
+
+            {
+                "id": "9437",
+                "desc": "夏日鸡尾酒",
+                "rd": "37787.6.12"
+            },
+
+            {
+                "id": "867",
+                "desc": "给手机贴个膜",
+                "rd": "37787.6.13"
+            },
+
+            {
+                "id": "12005",
+                "desc": "潮男看过来",
+                "rd": "37787.6.15"
+            },
+
+            {
+                "id": "7052",
+                "desc": "进口奶粉",
+                "rd": "37787.6.16"
+            },
+
+            {
+                "id": "12347",
+                "desc": "智能手环",
+                "rd": "37787.6.17"
+            },
+
+            {
+                "id": "5270",
+                "desc": "苹果周边",
+                "rd": "37787.6.18"
+            },
+
+            {
+                "id": "832",
+                "desc": "专业单反",
+                "rd": "37787.6.19"
+            },
+
+            {
+                "id": "2694",
+                "desc": "平板电脑",
+                "rd": "37787.6.20"
+            },
+
+            {
+                "id": "6864",
+                "desc": "超级本",
+                "rd": "37787.6.21"
+            },
+
+            {
+                "id": "1105",
+                "desc": "游戏本",
+                "rd": "37787.6.22"
+            },
+
+            {
+                "id": "11963",
+                "desc": "夏日凉席",
+                "rd": "37787.6.23"
+            },
+
+            {
+                "id": "1392",
+                "desc": "该贴面膜了",
+                "rd": "37787.6.24"
+            },
+
+            {
+                "id": "9756",
+                "desc": "跑步鞋",
+                "rd": "37787.6.25"
+            },
+
+            {
+                "id": "1484",
+                "desc": "健身跑起来",
+                "rd": "37787.6.26"
+            },
+
+            {
+                "id": "9772",
+                "desc": "高跟鞋",
+                "rd": "37787.6.27"
+            },
+
+            null
+        ];
+    </script>
+    <!--WEBPAGEEND@7139-->
+    <script type="text/javascript">
+        var ppms_cnxh = [
+            {
+                isShowCNXH: "1"
+            }
+
+        ]</script>
+    <div class="wet_section" id="cnxhShow" style="display:none;">
+        <div class="section_hd">
+            <h3>猜你喜欢</h3>
+        </div>
+        <div class="wet_pro_panel wet_pro_v2_panel">
+            <div class="wet_pro_list">
+            </div>
+            <!-- /list -->
+        </div>
+        <!-- /panel -->
+    </div>
+    <!-- /section -->
+</div>
+<a id="backToTop" href="#" class="WX_backtop">返回顶部</a>
+<!-- 浮层的添加 修改二-->
+<div class="wx_bar_guide_area_1" style="display:none">
+    <div class="wx_guide_box">
+        <div class="step_2">
+            <span class="piece_o"></span>
+            <span class="piece_txt"></span>
+            <span class="piece_box"></span>
+            <a href="#" class="end">马上体验</a>
+        </div>
+    </div>
+</div>
+
+<!-- 显示的时候添加show 需要隐藏的时候 添加 hide -->
+<div class="wx_side_float hide" id="joyFloat">
+    <div class="float_item float_item_wend">
+        <div class="body" id="joyBody"></div>
+        <div class="close" id="joyClose"><i class="icon_close"></i></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window._navfoot = {
+        manual: true
+    };
+</script>
+
+<script>
+    var ppms_index_seckill = [
+
+        {
+            "name": "家庭场",
+            "defaultImg": "//img11.360buyimg.com/jdphoto/s260x160_jfs/t1957/158/528284137/52176/837a0a6c/561711dbNfe1e4e7f.jpg",
+            "defaultDesc": "家居个护低价秒杀",
+            "stime": "01:00:00",
+            "etime": "11:59:59",
+            "list": [
+
+                {
+                    "date": "2015/10/17 00:00:00",
+                    "desc": "长嘴狗活性炭9.9元",
+                    "img": "//img11.360buyimg.com/jdphoto/s260x160_jfs/t1858/324/563035358/10718/3eb96cd6/5618c415N9bcecb0d.jpg"
+                },
+
+                {
+                    "date": "2015/10/18 00:00:00",
+                    "desc": "真空压缩袋39.9",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1894/94/575480254/20485/3eefd12c/5618c4dcNff037754.jpg"
+                },
+
+                {
+                    "date": "2015/10/19 00:00:00",
+                    "desc": "玻璃保鲜饭盒19.9元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2344/19/659761320/54146/ab9c169b/561f7960N5cca50fc.jpg"
+                },
+
+                {
+                    "date": "2015/10/20 00:00:00",
+                    "desc": "创意保温杯19.9元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1915/61/712703796/46249/fc03f77b/56248d48N8dbeb5ca.jpg"
+                },
+
+                {
+                    "date": "2015/10/21 00:00:00",
+                    "desc": "哈尔斯隔热杯9.9元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1921/163/787164840/8446/156461cc/5626f30dN453e6779.jpg"
+                },
+
+                {
+                    "date": "2015/10/22 00:00:00",
+                    "desc": "时尚保温杯19.9抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2248/266/706715090/24916/db79a877/56249222Nf416caed.jpg"
+                },
+
+                {
+                    "date": "2015/10/23 00:00:00",
+                    "desc": "功夫茶具套装59抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2182/347/712527813/17144/72218c4f/562492a7N7cec502d.jpg"
+                },
+
+                {
+                    "date": "2015/10/24 00:00:00",
+                    "desc": "玲珑镂空茶具59元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2092/58/771212868/38733/3635f3d6/5629a5e8N47bd0b31.jpg"
+                },
+
+                {
+                    "date": "2015/10/25 00:00:00",
+                    "desc": "真空保温杯19.9元抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2269/206/777492134/35789/4a826ccd/5629a664N6f54a44b.jpg"
+                },
+
+                {
+                    "date": "2015/10/26 00:00:00",
+                    "desc": "煎蛋模具9.9元抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2410/60/793449805/22863/5f504e75/562a1c4eN69e92461.jpg"
+                },
+
+                {
+                    "date": "2015/10/27 00:00:00",
+                    "desc": "冰裂茶具套装25.8元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2380/348/842462391/55953/2ce5d37d/562e0b29N0e5b1fd1.jpg"
+                },
+
+                {
+                    "date": "2015/10/28 00:00:00",
+                    "desc": "防滑地垫9.9限量抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2221/281/881269594/11853/986ccac8/563037f8N9b1211e2.jpg"
+                },
+
+                {
+                    "date": "2015/10/29 00:00:00",
+                    "desc": "儿童壶保温杯19.9元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2491/40/871395963/28698/eef56691/563173b2N3ed6559a.jpg"
+                },
+
+                {
+                    "date": "2015/10/30 00:00:00",
+                    "desc": "垃圾袋9.9元包邮抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2233/243/890916108/20122/646acc4d/5632ce44N0cea55f5.jpg"
+                },
+
+                {
+                    "date": "2015/10/31 00:00:00",
+                    "desc": " 加厚暖绒被79元抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1945/294/850653583/20836/dbf9a6c/56308486N0bf0e7f8.jpg"
+                },
+
+                {
+                    "date": "2015/11/01 00:00:00",
+                    "desc": "法国套刀1折抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2167/151/921679821/9215/b59e0b8c/563493d8N11105679.jpg"
+                },
+
+                {
+                    "date": "2015/11/02 00:00:00",
+                    "desc": "苏泊尔套装3折抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2350/88/919732785/13079/3fd7a857/56360675N42e963e9.jpg"
+                },
+
+                {
+                    "date": "2015/11/03 00:00:00",
+                    "desc": "保温杯11.1元抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1846/62/961880327/7823/a910ad18/56373527N2f0bda8f.jpg"
+                },
+
+                {
+                    "date": "2015/11/04 00:00:00",
+                    "desc": "爱仕达刀具11.1元抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2572/298/139735883/10127/fa247fac/56396b41Nde85ba35.jpg"
+                },
+
+                {
+                    "date": "2015/11/05 00:00:00",
+                    "desc": "不粘平底炒锅79元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2170/279/1041616950/22645/f7e19a9a/563aae36N32e53972.jpg"
+                },
+
+                {
+                    "date": "2015/11/06 00:00:00",
+                    "desc": "真空保温杯11.1元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1924/221/1045451520/10605/f809a549/563c13c8Nf3164a6b.jpg"
+                },
+
+                {
+                    "date": "2015/11/07 00:00:00",
+                    "desc": "南极人毯子39元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2503/314/1061297148/19071/5c25d215/563c7ea2Nca469728.jpg"
+                },
+
+                {
+                    "date": "2015/11/08 00:00:00",
+                    "desc": "不锈钢火锅11.1元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1849/330/995793307/26347/ae531beb/563c7fa2N4f4d9805.jpg"
+                },
+
+                {
+                    "date": "2015/11/09 00:00:00",
+                    "desc": "爱仕达厨具套装99元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2044/339/1071405789/29353/ed58ff60/563f41dfN5893f158.jpg"
+                },
+
+                {
+                    "date": "2015/11/10 00:00:00",
+                    "desc": "触摸调光台灯29.9元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2404/317/1138307198/7867/96ba010/5640914fN066c5306.jpg"
+                },
+
+                {
+                    "date": "2015/11/11 00:00:00",
+                    "desc": "法国套刀1折抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2167/151/921679821/9215/b59e0b8c/563493d8N11105679.jpg"
+                },
+
+                {
+                    "date": "2015/11/12 00:00:00",
+                    "desc": "爱仕达三件套79元 ",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2161/145/1140580958/16264/70619666/5643043cN1c99da3f.jpg"
+                },
+
+                {
+                    "date": "2015/11/13 00:00:00",
+                    "desc": "天使守护小夜灯9.9元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2086/52/1151193158/43429/32e65749/56447302N18720864.jpg"
+                },
+
+                {
+                    "date": "2015/11/14 00:00:00",
+                    "desc": "陶瓷刀套装9.9元抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1840/248/1109087945/44683/c88cfe31/5645974eN6c195fbe.jpg"
+                },
+
+                {
+                    "date": "2015/11/15 00:00:00",
+                    "desc": "时尚鞋包收纳凳29.9元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2104/7/999696200/57165/ecf8f3aa/5645979fNbae618ca.jpg"
+                },
+
+                {
+                    "date": "2015/11/16 00:00:00",
+                    "desc": "小黄人便当盒49.9元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1888/69/1111429861/66971/b7245610/56459805N823f07d9.jpg"
+                },
+
+                {
+                    "date": "2015/11/17 00:00:00",
+                    "desc": "功夫茶具套装88元抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1894/226/1122461165/43453/2db9ff5e/56499e50N711933f0.jpg"
+                },
+
+                {
+                    "date": "2015/11/18 00:00:00",
+                    "desc": "加厚保暖坐垫9.9元抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2128/331/1127815407/10101/aeb3d5a/56499eb8Ne6dfa48f.jpg"
+                },
+
+                {
+                    "date": "2015/11/19 00:00:00",
+                    "desc": "茶为媒泡茶器9.9元抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1990/33/1248306510/10162/f12071bc/564d2d77N986c0bc6.jpg"
+                },
+
+                {
+                    "date": "2015/11/20 00:00:00",
+                    "desc": "魅洁蓝泡泡9.9元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1921/286/1196977800/18146/da457203/564c1ae6N336a02f8.jpg"
+                },
+
+                {
+                    "date": "2015/11/21 00:00:00",
+                    "desc": "双层煮蛋器29.9元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2041/111/1296486780/16864/69709529/564fcac7N0b189072.jpg"
+                },
+
+                {
+                    "date": "2015/11/22 00:00:00",
+                    "desc": "澳洲进口便当盒49.9元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2314/365/1350101910/16796/7c3141c1/564e8c77N156c5e45.jpg"
+                },
+
+                {
+                    "date": "2015/11/23 00:00:00",
+                    "desc": "厨房置物架 99元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2125/259/1195302267/15012/b93ed23c/564e8c81Ne9d0fa2a.jpg"
+                },
+
+                {
+                    "date": "2015/11/24 00:00:00",
+                    "desc": "酒店餐具用品五件套",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2173/69/1263577441/34874/a17257f7/5652e3a0Nbc867c5a.jpg"
+                },
+
+                {
+                    "date": "2015/11/25 00:00:00",
+                    "desc": "家用保温瓶69元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2512/250/517281380/12656/ddd748a0/56542272N8ddf16d5.jpg"
+                },
+
+                {
+                    "date": "2015/11/26 00:00:00",
+                    "desc": "明蓝坊保温杯29元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2416/38/1300531457/20158/752399d1/56552781Ncb89ee06.jpg"
+                },
+
+                {
+                    "date": "2015/11/27 00:00:00",
+                    "desc": "可收缩滤水菜篮9.9元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2041/239/1359657562/19309/926c68d4/5656d5d7Nb3d777a2.jpg"
+                },
+
+                {
+                    "date": "2015/11/28 00:00:00",
+                    "desc": "史努保温便当盒39元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2212/270/1505339133/19862/e705db96/565829e5N859cd6cd.jpg"
+                },
+
+                {
+                    "date": "2015/11/29 00:00:00",
+                    "desc": "哈尔斯保温杯39.9元抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2029/16/1339910210/17442/e4ef0c8/56582a4aNec964141.jpg"
+                },
+
+                {
+                    "date": "2015/11/30 00:00:00",
+                    "desc": "百纳储物盒39.9元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2026/66/1460973094/13430/91e93116/5658308fNba2436f9.jpg"
+                },
+
+                null
+            ]
+        },
+
+        {
+            "name": "吃货场",
+            "defaultImg": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2077/160/545308061/23634/ea9ea771/561711ddNe0da4bc1.jpg",
+            "defaultDesc": "爆款食品低价抢",
+            "stime": "12:00:00",
+            "etime": "15:59:59",
+            "list": [
+
+                {
+                    "date": "2015/10/26 00:00:00",
+                    "desc": "老窖白酒1元秒",
+                    "img": "//img11.360buyimg.com/jdphoto/s260x160_jfs/t1984/328/799774710/14143/b6097143/5629c9a4Nefcea6ee.jpg"
+                },
+
+                {
+                    "date": "2015/10/28 00:00:00",
+                    "desc": "泸州古酒1元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2434/305/765690669/11462/d54d2ced/5629c9aaN0d01ac3d.jpg"
+                },
+
+                {
+                    "date": "2015/10/30 00:00:00",
+                    "desc": "汾酒1元秒杀",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2365/337/799550365/11255/ac99cdf6/5629c9aeN7a6bb82d.jpg"
+                },
+
+                {
+                    "date": "2015/10/27 00:00:00",
+                    "desc": "牛肉干100克9.9元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1849/325/831738671/19444/99415502/562e0dbaNce972ae8.jpg"
+                },
+
+                {
+                    "date": "2015/10/29 00:00:00",
+                    "desc": "玫瑰红提9.9元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2488/7/808021537/31293/51acfa4f/562f11a8Ndb948a01.jpg"
+                },
+
+                {
+                    "date": "2015/10/31 00:00:00",
+                    "desc": "板栗仁100g1元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1960/81/847823455/28976/f7fa560c/562f11f4N4c413af2.jpg"
+                },
+
+                {
+                    "date": "2015/11/01 00:00:00",
+                    "desc": "蔓越莓干19.9元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2185/140/903703634/28518/96619ece/5634e3feN194ac77b.jpg"
+                },
+
+                {
+                    "date": "2015/11/02 00:00:00",
+                    "desc": "泸州老窖1元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2194/87/919998024/15047/2b36d361/56350039Nfd62dd80.jpg"
+                },
+
+                {
+                    "date": "2015/11/03 00:00:00",
+                    "desc": "Tipo面包干1.1元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2431/78/977483967/16510/4533a537/563743e4N34b463bb.jpg"
+                },
+
+                {
+                    "date": "2015/11/05 00:00:00",
+                    "desc": "周黑鸭鸭脖11.11元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2020/274/990629997/18587/87348f50/5637444aN1946e470.jpg"
+                },
+
+                {
+                    "date": "2015/11/04 00:00:00",
+                    "desc": "景芝福酒1元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2527/147/136444337/9987/b93a3782/56389b35N354081b3.jpg"
+                },
+
+                {
+                    "date": "2015/11/06 00:00:00",
+                    "desc": "泸州古酒9.9元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2323/246/938938426/13682/8e81f9f2/563b4ca9Nf96c808c.jpg"
+                },
+
+                {
+                    "date": "2015/11/07 00:00:00",
+                    "desc": "进口红酒1元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2488/284/985012153/9848/a920f42a/563d6dc5Ne94cf9f0.jpg"
+                },
+
+                {
+                    "date": "2015/11/08 00:00:00",
+                    "desc": "多味花生2包9.9元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2464/117/1054333989/41319/38ec5077/563de3c5Nea3506d0.jpg"
+                },
+
+                {
+                    "date": "2015/11/09 00:00:00",
+                    "desc": "进口啤酒6罐11元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2413/310/979888250/20049/132c9662/563f203cN61a3e5dc.jpg"
+                },
+
+                {
+                    "date": "2015/11/10 00:00:00",
+                    "desc": "金骏眉13.9元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2311/296/1194625495/19074/5566bd44/56408805N007e1946.jpg"
+                },
+
+                {
+                    "date": "2015/11/11 12:10:25",
+                    "desc": "冰锐19.9元抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2341/298/981102045/17767/4b2884d9/5642e30aNd4098ad9.jpg"
+                },
+
+                {
+                    "date": "2015/11/15 00:00:00",
+                    "desc": "绿茶1一元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1894/164/1110486495/19127/107e3675/5644613fN1494cc9f.jpg"
+                },
+
+                {
+                    "date": "2015/11/13 00:00:00",
+                    "desc": "泸州古酒1元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2035/237/1067383072/13489/9ccd28cc/564474fdNb80d305f.jpg"
+                },
+
+                {
+                    "date": "2015/11/16 00:00:00",
+                    "desc": "口碑好酒1元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2485/278/1031321586/7241/5b3750bd/5645a076Ne2f4dd1a.jpg"
+                },
+
+                {
+                    "date": "2015/11/17 00:00:00",
+                    "desc": "办公室零食1元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2572/216/387596245/21117/a88b306d/5649cd10Nc3160a4d.jpg"
+                },
+
+                {
+                    "date": "2015/11/18 00:00:00",
+                    "desc": "雪花啤酒2.4元/罐",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1975/314/1256140966/14026/6f13c84a/564af6baNdd882bdd.jpg"
+                },
+
+                {
+                    "date": "2015/11/20 00:00:00",
+                    "desc": "德国进口甜白9.9元",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2365/205/1130455146/8372/b11aa3ea/564af71fN187692d9.jpg"
+                },
+
+                {
+                    "date": "2015/11/19 00:00:00",
+                    "desc": "茗茶1元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1894/164/1110486495/19127/107e3675/5644613fN1494cc9f.jpg"
+                },
+
+                {
+                    "date": "2015/11/21 14:29:25",
+                    "desc": "桂圆干9.9包邮",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2182/220/1226862874/14456/a29d3704/564ebebcN71db0e1c.jpg"
+                },
+
+                {
+                    "date": "2015/11/22 14:33:31",
+                    "desc": "绿色黄金小麦9.9包邮",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2182/220/1226862874/14456/a29d3704/564ebebcN71db0e1c.jpg"
+                },
+
+                {
+                    "date": "2015/11/23 00:00:00",
+                    "desc": "进口红酒1元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2170/189/1380703994/7258/823375e1/564f0a18N6f03ad48.jpg"
+                },
+
+                {
+                    "date": "2015/11/24 00:00:00",
+                    "desc": "越南青芒果4.5斤/6-8个大芒果  29秒杀",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2539/305/522600604/9646/7b047551/5652e735Ndd7de6f2.jpg"
+                },
+
+                {
+                    "date": "2015/11/25 00:00:00",
+                    "desc": "法国进口红酒1元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1945/340/1363464932/8505/b0b1f9f7/565428b0N0a664fab.jpg"
+                },
+
+                {
+                    "date": "2015/11/26 00:00:00",
+                    "desc": "玫瑰杨梅108g 1元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2380/201/1382764246/8322/eb467def/565669efN7ef6dc6f.jpg"
+                },
+
+                {
+                    "date": "2015/11/28 00:00:00",
+                    "desc": "双黄咸鸭蛋16只真空包装 48元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2161/77/1390553119/9042/8f5a58f9/56567057Nb7c84f29.jpg"
+                },
+
+                {
+                    "date": "2015/11/27 00:00:00",
+                    "desc": "脐橙精品果 12枚29.9包邮",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2524/43/588850159/9746/98ff3252/56567031N81a5e88b.jpg"
+                },
+
+                {
+                    "date": "2015/11/29 00:00:00",
+                    "desc": "500ml德国啤酒3.7/听",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2458/122/1436087013/14140/f572b4b4/5657ea72N1db7c28c.jpg"
+                },
+
+                {
+                    "date": "2015/11/30 00:00:00",
+                    "desc": "智利干露9.9元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2425/4/1426342955/11349/51ece00/5657eb6fNe56a0926.jpg"
+                },
+
+                {
+                    "date": "2015/12/02 00:00:00",
+                    "desc": "法国红酒1元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2137/74/1408645234/8541/542484a6/5657ef98Nef57abab.jpg"
+                },
+
+                null
+            ]
+        },
+
+        {
+            "name": "数码场",
+            "defaultImg": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1903/153/546153679/9732/6aeb8ad5/561711e1Nc8491628.jpg",
+            "defaultDesc": "富士微单拍你所想",
+            "stime": "16:00:00",
+            "etime": "20:59:59",
+            "list": [
+
+                {
+                    "date": "2015/11/09 00:00:00",
+                    "desc": "Xbox大促！",
+                    "img": "//img11.360buyimg.com/jdphoto/s260x160_jfs/t1975/330/1168895754/9978/7b6792fa/56404b13N6b37bb75.jpg"
+                },
+
+                {
+                    "date": "2015/11/10 00:00:00",
+                    "desc": "iPad mini4 降价促销",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2485/174/1001510233/12159/2146fb41/5641a8ccNcaa35d61.jpg"
+                },
+
+                {
+                    "date": "2015/11/11 00:00:00",
+                    "desc": "坚果投影神价秒杀",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2275/8/1035447009/8840/7a1c1877/5642e67aN39825123.jpg"
+                },
+
+                {
+                    "date": "2015/11/12 00:00:00",
+                    "desc": "航嘉插排大促销",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2029/46/1059106278/10358/ad6f9b15/56443abbNff137478.jpg"
+                },
+
+                {
+                    "date": "2015/11/13 22:43:31",
+                    "desc": "乐心运动手环促销",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2137/111/1144523157/11155/74e84d11/5644a5d6Ncafd23c2.jpg"
+                },
+
+                {
+                    "date": "2015/11/14 00:00:00",
+                    "desc": "Gopro运动相机大促",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2182/135/1119481536/11668/766f1043/5645de49N82c57a40.jpg"
+                },
+
+                {
+                    "date": "2015/11/15 00:00:00",
+                    "desc": "金士顿内存卡秒杀",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2026/219/1203510058/10294/79d12a4f/5645de9bN5f59b2e3.jpg"
+                },
+
+                {
+                    "date": "2015/11/16 00:00:00",
+                    "desc": "显示器支架秒杀",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2557/163/355701185/9260/b563e110/5645dec6Nd1b89793.jpg"
+                },
+
+                {
+                    "date": "2015/11/17 00:00:00",
+                    "desc": "小米路由器129元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2041/93/1219940806/7913/f86b858d/5649b053N6be3c5aa.jpg"
+                },
+
+                {
+                    "date": "2015/11/18 00:00:00",
+                    "desc": "通用数据线神价秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2128/319/1151245030/8454/ead970bd/564b048eN61b0761e.jpg"
+                },
+
+                {
+                    "date": "2015/11/19 00:00:00",
+                    "desc": "苹果手机壳限量包邮",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1912/110/1003501528/10345/6b050de9/564c92c2N8f73816b.jpg"
+                },
+
+                {
+                    "date": "2015/11/20 00:00:00",
+                    "desc": "罗技鼠标粉丝回馈",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2464/326/1241004485/8073/2dd36e9d/564d701dN0d9b1cc5.jpg"
+                },
+
+                {
+                    "date": "2015/11/21 00:00:00",
+                    "desc": "航嘉排插超值促销",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2527/294/488894543/8978/89332268/564f1822N8cedb462.jpg"
+                },
+
+                {
+                    "date": "2015/11/22 00:00:00",
+                    "desc": "闪迪超值U盘",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1981/227/1236891811/10526/1700160f/564f1847N90d8ab15.jpg"
+                },
+
+                {
+                    "date": "2015/11/23 00:00:00",
+                    "desc": "唯美超值手机壳",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1948/237/1316606824/10379/3f2b98a9/564f1867Nf220a4f5.jpg"
+                },
+
+                {
+                    "date": "2015/11/24 00:00:00",
+                    "desc": "金河田排插特惠价",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1930/177/1402405648/9593/3c109abe/5652d15dN5a6f1576.jpg"
+                },
+
+                {
+                    "date": "2015/11/25 00:00:00",
+                    "desc": "无线蓝牙耳机促销",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2023/211/1469490054/9957/b5cd0b05/56545712Nba32f8a8.jpg"
+                },
+
+                {
+                    "date": "2015/11/26 00:00:00",
+                    "desc": "懒人福利包邮抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2092/301/1359203738/9772/5ff7f26b/5655caa7N6ef6cec7.jpg"
+                },
+
+                {
+                    "date": "2015/11/27 00:00:00",
+                    "desc": "二合一数据线限时抢",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2233/34/1429349344/9768/47e4611a/565719eeN651d61fc.jpg"
+                },
+
+                {
+                    "date": "2015/11/28 00:00:00",
+                    "desc": "品质手机壳包邮秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2218/66/1456266130/10155/6a6c6eab/56588542N811e0038.jpg"
+                },
+
+                {
+                    "date": "2015/11/29 00:00:00",
+                    "desc": "平板支架包邮秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2530/171/612227593/10164/dcddf0de/565885a0N8ba92c5e.jpg"
+                },
+
+                {
+                    "date": "2015/11/30 00:00:00",
+                    "desc": "金士顿U盘秒杀",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2083/175/1358891807/9381/d6460f4c/565885c6N25954cf5.jpg"
+                },
+
+                null
+            ]
+        },
+
+        {
+            "name": "家电场",
+            "defaultImg": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2416/151/528851665/18682/cd1b1ec6/561711d8N0fdf576a.jpg",
+            "defaultDesc": "家电特价限时抢",
+            "stime": "21:00:00",
+            "etime": "00:59:59",
+            "list": [
+
+                {
+                    "date": "2015/11/24 00:00:00",
+                    "desc": "美的电热水器899元秒",
+                    "img": "//img11.360buyimg.com/jdphoto/s260x160_jfs/t2578/150/446909087/11058/67b2fa1/564d6a3cN29affbc7.jpg"
+                },
+
+                {
+                    "date": "2015/11/25 00:00:00",
+                    "desc": "欧式电暖器89元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1906/99/1011048865/11904/ede4d9b1/564d6a3eNb369e257.jpg"
+                },
+
+                {
+                    "date": "2015/11/26 00:00:00",
+                    "desc": "欧式取暖器149元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2422/315/1190172170/9206/a493a8d/564d6a3fN6c1addd2.jpg"
+                },
+
+                {
+                    "date": "2015/11/27 00:00:00",
+                    "desc": "触控电磁炉139元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2416/321/1241093864/12686/d31c8554/564d6a41Nec1bf184.jpg"
+                },
+
+                {
+                    "date": "2015/11/28 00:00:00",
+                    "desc": "5L电压力锅289元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2359/171/1306813994/13338/196b9d43/564d6a43N6e67fa38.jpg"
+                },
+
+                {
+                    "date": "2015/11/29 00:00:00",
+                    "desc": "电火锅89元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2509/101/448591574/12484/2b224ed/564d6a44N7f5327e6.jpg"
+                },
+
+                {
+                    "date": "2015/11/30 00:00:00",
+                    "desc": "九阳电饭煲239元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2188/352/1376274922/10090/45750995/5657f016N6973891a.jpg"
+                },
+
+                {
+                    "date": "2015/12/01 00:00:00",
+                    "desc": "格力烘干机229元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2191/293/1060470890/6337/5c33a0bf/56580fd9N8434eb6d.jpg"
+                },
+
+                {
+                    "date": "2015/12/02 00:00:00",
+                    "desc": "按摩足浴盆99元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2452/344/1485016233/8751/15b72fdd/5657f01aNceed0c5a.jpg"
+                },
+
+                {
+                    "date": "2015/12/03 00:00:00",
+                    "desc": "智能电饭煲129元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2029/112/1302218938/9056/e798d965/5657f011N2be83238.jpg"
+                },
+
+                {
+                    "date": "2015/12/04 00:00:00",
+                    "desc": "炉取暖器89元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2551/211/614950547/10041/30a9ff04/5657f013N61f06aef.jpg"
+                },
+
+                {
+                    "date": "2015/12/05 00:00:00",
+                    "desc": "1.5L电水壶  59元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t1918/236/1062984603/9529/de521b46/5657f014N6a83113e.jpg"
+                },
+
+                {
+                    "date": "2015/12/06 00:00:00",
+                    "desc": "2L电热饭盒69元秒",
+                    "img": "http://img11.360buyimg.com/jdphoto/s260x160_jfs/t2092/167/1390726931/11398/fbbc34c6/5657f017N2390f085.jpg"
+                },
+
+                null
+            ]
+        },
+
+        null
+    ];
+</script>
+
+<!-- S 模版区 -->
+<!--S TopBanner -->
+<script type="text/template" id="tplTopBanner">
+
+    <div class="list" style="-webkit-transform: translateX(0%);">
+        <%
+        var getScaleImg = JD.img.getScaleImg,
+        adRD = ['37787.2.4','37787.2.5','37787.2.6'];
+        for (var i=0,len=data.length;i
+        <len
+        ;i++) {
+        var item = data[i].plans[0],
+        rd = adRD[i];
+        if (!item.material) {continue;}
+        %>
+        <div class="item">
+            <a href="<%=item.sUrl%>&PTAG=<%=rd%>" class="url" ptag="<%=rd%>">
+                <img src="<%=getScaleImg(item.material)%>" alt="" onload="firstImgLoaded();">
+            </a>
+        </div>
+        <%}%>
+    </div>
+    <div class="tit_list">
+        <%
+        for (var i=0,len=data.length;i
+        <len
+        ;i++) {
+        var item = data[i].plans[0],
+        rd = adRD[i],
+        clsSelected = i==0 ? 'cur' : '';
+        if (!item.materialname) {continue;}
+        %>
+        <div class="tit <%=clsSelected%>" ptag="<%=rd%>"><%=item.materialname%></div>
+        <%}%>
+    </div>
+    <div class="switch">
+        <div class="bar left"><i class="icon_s_left" ptag="37787.2.7"></i></div>
+        <div class="bar right"><i class="icon_s_right" ptag="37787.2.7"></i></div>
+    </div>
+</script>
+<!--E TopBanner -->
+
+<!-- S 广告位 -->
+<script type="text/template" id="tplAdBanner">
+    <%
+    var getScaleImg = JD.img.getScaleImg;
+    for(var i=0,len = data.length;i< len;i++){
+    var o = data[i],
+    imgSrc = getScaleImg(o.urlImg1);
+    %>
+    <div class="item">
+        <a href="<%=o.link%>" class="url">
+            <img src="<%=imgSrc%>" alt="">
+        </a>
+    </div>
+    <%}%>
+</script>
+<!-- E 广告位 -->
+
+
+<script type="text/template" id="tplTejia">
+    <%
+    var getScaleImg = JD.img.getScaleImg,
+    current = data.current,
+    next = data.next,
+    stateText =  current.state == 1 ? '后结束' : '后开始',
+    nextUrl = '//wq.jd.com/mcoss/mportal/show?tabid=9&tpl=9&PTAG=37787.4.3&title=%E7%89%B9%E4%BB%B7';
+
+    %>
+    <div class="hd">
+        <h3>特价</h3>
+    </div>
+    <div class="info">
+        <div class="tp">
+            <span class="food"><%=current.title%></span>
+            <span class="mod_time_counter"><b class="h">13</b><span class="p">:</span><b class="m">34</b><span
+                    class="p">:</span><b class="s">45</b></span>
+            <span><%=stateText%></span>
+        </div>
+        <div class="ct">
+            <a href="//wq.jd.com/mcoss/mportal/show?tabid=9&tpl=9&PTAG=37787.4.3&title=%E7%89%B9%E4%BB%B7&groundid=<%=current.tabground%>">
+                <span class="ct_name"><%=current.desc%></span>
+
+                <div class="img">
+                    <img src="<%=getScaleImg(current.img)%>"/>
+                </div>
+            </a>
+        </div>
+        <div class="ft">
+            <a href="<%=nextUrl%>&groundid=<%=next.tabground%>" class="line">
+                <span class="wet_c_red"><%=next.title%></span> <%=next.desc%>
+            </a>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="tplChannel">
+    <div class="r_img">
+        <div class="img_info">
+            <h3><%=channel%></h3>
+
+            <div class="img_logo">
+                <%=/^http/i.test(materialname)?('<img src='+materialname+'>'):materialname%>
+            </div>
+            <div class="img_des"><%=materialdesc%></div>
+        </div>
+        <div class="img">
+            <img src="<%=material%>"/>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="tplFloorHead">
+    <a href="<%=link%>">
+        <h3>
+            <img src="<%=logo%>" class="floor_img">
+            <%=name%>
+            <span class="tit_des"><%=slogan%></span>
+            <%=tag?('<span class="sign_ps">'+tag+'</span>'):''%>
+        </h3>
+    <span class="more">
+        <span class="arrow"></span>
+    </span>
+    </a>
+</script>
+
+<script type="text/template" id="tplFloorCnt">
+    <%
+    var getScaleImg = JD.img.getScaleImg;
+    %>
+    <div class="l_item">
+        <a href="<%=list[0].sUrl%>" class="item">
+            <h4><%=list[0].itemName%></h4>
+
+            <p><%=list[0].itemPromote%></p>
+
+            <div class="img">
+                <img init_src="<%=getScaleImg(list[0].material)%>"/>
+            </div>
+        </a>
+        <a href="<%=list[0].sUrl%>" class="enter_shop"><%=list.btnText%></a>
+
+    </div>
+    <div class="r_item">
+        <ul>
+            <%for(var i=1,j=list.length;i
+            <j
+            ;i++){%>
+            <%if(!list.chaoshi && i==1){%>
+            <li>
+                <a href="<%=list[i].sUrl%>" class="item span_item">
+                    <%=list[i].materialdesc=="1"?'<i class="hot"></i>':list[i].materialdesc=="2"?'<i class="new"></i>':''%>
+                    <div class="des_info">
+                        <div class="posit">
+                            <h4><%=list[i].itemName%></h4>
+
+                            <p><%=list[i].itemPromote%></p>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img init_src="<%=getScaleImg(list[i].material)%>"/>
+                    </div>
+                </a>
+            </li>
+            <%}else{%>
+            <li>
+                <a href="<%=list[i].sUrl%>" class="item">
+                    <%=list[i].materialdesc=="1"?'<i class="hot"></i>':list[i].materialdesc=="2"?'<i class="new"></i>':''%>
+                    <h4><%=list[i].itemName%></h4>
+
+                    <p><%=list[i].itemPromote%></p>
+
+                    <div class="img">
+                        <img init_src="<%=getScaleImg(list[i].material)%>"/>
+                    </div>
+                </a>
+            </li>
+            <%}%>
+            <%}%>
+        </ul>
+    </div>
+</script>
+
+<!-- S 精选类目 -->
+<script type="text/template" id="tplIndexHot">
+    <%
+    var signs = {
+    0 : "",
+    1 : '
+    <div class="sign hot">hot</div>',
+    2 : '
+    <div class="sign ziying">自营</div>'
+    };
+
+    for( var i=0,len = data.length; i
+    <len; i++) {
+    var o = data[i],
+    materialname = (o.materialname ? o.materialname : ';').split(/;|；/);
+    title = materialname[0],
+    desc = materialname[1],
+    sign = signs[o.materialdesc];
+    %>
+    <div class="item">
+        <a href="<%=o.sUrl%>" class="url">
+            <%=sign%>
+            <div class="info">
+                <div class="name"><%=title%></div>
+                <div class="desc"><%=desc%></div>
+            </div>
+            <div class="img">
+                <img init_src="<%=JD.img.getScaleImg(o.material)%>" alt=""/>
+            </div>
+        </a>
+    </div>
+    <%}%>
+</script>
+<!-- E 精选类目 -->
+
+<!-- S 精选类目 微店和全球购 微店数据来源于ppms 全球购来源于cpc-->
+<div id="ppmsdata_home">
+    <!--WEBPAGEBEGIN@7963-->
+    <p dTitle="姑娘，你的新鞋呢？" dPid="3" dBehalf="优雅秋鞋，等你发现" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2500/344/320631253/73535/c2431984/560115a9N95285486.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2005/278/364703725/47188/b7513c5/560115bbNa0b36131.jpg"
+       dgid="3161" dgid="3161" dlocationid="8316" dShopPtag="37790.1.273"
+       dDate="2015/09/22 09:00:00" dLink="" dShow="{#dshow#}"></p>
+
+    <p dTitle="运动潮流这么搭" dPid="1" dBehalf="从“型”开始 潮牌尖货" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2002/115/382040853/40754/437a4b79/56037140N8cbd7651.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2059/213/404642384/29017/565d8ba7/5603718fN832fb82a.jpg"
+       dgid="3161" dgid="3161" dlocationid="8317" dShopPtag="37790.1.274" dDate="2015/09/25 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="这么穿MAN到没朋友" dPid="2" dBehalf="不做花美男 做个man度爆表轻熟男" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2170/7/370842380/40596/627b2ca4/5603c864N7be25dea.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t1855/92/371751712/29773/8c447bbc/5603c887N25d03ccc.jpg"
+       dgid="3161" dgid="3161" dlocationid="8318" dShopPtag="37790.1.280" dDate="2015/09/29 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="穿出甜美可人范儿" dPid="3" dBehalf="秋装新衣，穿出“傻白甜”" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2104/268/381096789/44705/5a31398d/5604ecaeNd526dbe7.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2038/200/399058028/44493/82132fda/5604ecb7Nc05f619c.jpg"
+       dgid="3161" dgid="3161" dlocationid="8321" dShopPtag="37790.1.277" dDate="2015/09/28 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="秋季百搭吸睛饰品" dPid="3" dBehalf="秋季潮流美饰一网打尽" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2503/47/408280061/43293/98ac401f/560539e3Nc12702ff.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2488/142/383938217/28583/8ab5e2ee/56051da2Nd8c6f951.jpg"
+       dgid="3163" dgid="3163" dlocationid="8327" dShopPtag="37790.1.271" dDate="2015/09/27 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="秋季补水刻不容缓" dPid="3" dBehalf="远离干燥，给肌肤喝点水" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t1774/265/1764205532/30798/152e004d/56052166N0e4c9e15.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2227/219/390303169/35146/1c93af2f/5605216dN54942407.jpg"
+       dgid="3163" dgid="3163" dlocationid="8328" dShopPtag="37790.1.275" dDate="2015/09/26 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="气质女神的换季造型" dPid="3" dBehalf="N种优雅着装方案，秒变大气女神！" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t1918/242/429807580/44927/f90e3900/5608a02fN59319833.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2371/257/392238423/44539/5eadd752/5608a034Ned8b4201.jpg"
+       dgid="3163" dgid="3163" dlocationid="8325" dShopPtag="37790.1.283" dDate="2015/09/30 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="轻熟男的初秋穿衣术" dPid="2" dBehalf="精选品质通勤装 降温不降逼格 " dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2026/142/415587039/40369/84ec6fa/56090d54Ne94f2f6c.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t1843/257/413593999/40259/3bf75f47/56090d87N5208e5dd.jpg"
+       dgid="3189" dgid="3189" dlocationid="8384" dShopPtag="37790.1.287" dDate="2015/10/02 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="巧用围巾拗造型" dPid="3" dBehalf="秋冬保暖，围出精彩" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t1894/50/471104954/30087/3cf28f1e/56091840N8ff2308d.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2272/12/410114728/30380/df9b9cde/5609184aNd09bac46.jpg"
+       dgid="3189" dgid="3189" dlocationid="8385" dShopPtag="37790.1.289" dDate="2015/10/04 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="智能家居大揭秘" dPid="1" dBehalf="让你的生活更简单" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2395/37/422878959/46156/2eaf12d8/5609f0c9N5621155e.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t1990/322/422135836/26049/f8a43bb6/5609f0ceNe30006b3.jpg"
+       dgid="3189" dgid="3189" dlocationid="8386" dShopPtag="37790.1.290" dDate="2015/10/05 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="大牌手表百搭术" dPid="2" dBehalf="大牌手表让你倍儿有面！" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2506/195/451258703/46387/aee5de61/560a062fN056a28f3.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2419/280/423391376/29981/daae839f/560a0633N1b40b69c.jpg"
+       dgid="3189" dgid="3189" dlocationid="8387" dShopPtag="37790.1.288" dDate="2015/10/03 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="秋季运动这么穿" dPid="1" dBehalf="畅快流汗，美着享受" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2092/292/418077777/38660/c3a36c54/560a3275N245e8980.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2191/337/408998966/26360/b3d9229d/560a3283N52f8a043.jpg"
+       dgid="3189" dgid="3189" dlocationid="8388" dShopPtag="37790.1.293" dDate="2015/10/08 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="千元打造温馨卧室" dPid="1" dBehalf="卧室装扮，简单易行" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t1900/306/441171591/49101/d00042ea/560a4a2aN837cc072.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2149/259/429042366/27808/75b33d42/560a4a40Nfe9984ac.jpg"
+       dgid="3203" dgid="3203" dlocationid="8417" dShopPtag="37790.1.286" dDate="2015/10/01 00:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="潮流美饰UP回头率" dPid="3" dBehalf="潮流美饰攻略抢先看" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t1378/145/1293857496/56112/e93f160a/560b46bdN1ed4a94c.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2278/76/413341351/30239/ecd518b/560b46c1Ne86e61c4.jpg"
+       dgid="3203" dgid="3203" dlocationid="8418" dShopPtag="37790.1.291" dDate="2015/10/06 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="居家保暖有妙招" dPid="1" dBehalf="秋冬保暖有绝招" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t1888/78/424864906/29667/427b1ab9/560b51ceN20db3a1f.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2212/59/440980712/19842/868d4573/560b51d3N6fbef8f3.jpg"
+       dgid="3203" dgid="3203" dlocationid="8419" dShopPtag="37790.1.292" dDate="2015/10/07 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="衣橱必备显瘦羽绒" dPid="3" dBehalf="美丽不冻人，轻薄显瘦羽绒服" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2047/306/433808395/29920/c132b4c4/560b9021Nf6fda143.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t1867/316/449006683/30536/b304ca7f/560b9039N8edd1d18.jpg"
+       dgid="3203" dgid="3203" dlocationid="8420" dShopPtag="37790.1.295" dDate="2015/10/10 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="巧用包包提升造型感" dPid="3" dBehalf="不容错过的潮爆美包" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2170/30/431647190/80356/1820c6c9/560ba953N23a95531.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t1762/60/1762566650/40851/705a353f/560ba96bN44062f56.jpg"
+       dgid="3203" dgid="3203" dlocationid="8421" dShopPtag="37790.1.296" dDate="2015/10/11 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="家庭必备的平价好货" dPid="1" dBehalf="好用又平价的必备好货" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2224/263/520632659/50997/938fa6ab/56164416N29db8544.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2368/260/544460558/27716/8c7c3597/5616441cNec6fd889.jpg"
+       dgid="3203" dgid="3203" dlocationid="8422" dShopPtag="37790.1.294" dDate="2015/10/09 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="让你气场爆棚的皮草" dPid="3" dBehalf="保暖皮草季专场" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2167/275/560076127/26792/d9dff78c/5618b583Nf70d3fea.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2149/269/595624551/30326/74bf38e5/5618b59fN109828d4.jpg"
+       dgid="3212" dgid="3212" dlocationid="8449" dShopPtag="37790.1.297" dDate="2015/10/12 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="给娃换一双新鞋子" dPid="3" dBehalf="成长之路从脚下开启" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2017/287/557277712/24892/8fc2ab4e/5618c61cNc999d3dc.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2191/309/577257373/24427/94f028f2/5618c626Nd22142c7.jpg"
+       dgid="3212" dgid="3212" dlocationid="8450" dShopPtag="37790.1.298" dDate="2015/10/13 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="送给爸妈的金玉满堂" dPid="1" dBehalf="给爸爸妈妈送点“新”意" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2185/146/622907663/39938/7dfb26ed/561cbc5eNb5427035.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t1915/39/617430603/25017/596b8084/561cd6e0N4d768452.jpg"
+       dgid="3212" dgid="3212" dlocationid="8452" dShopPtag="37790.1.299" dDate="2015/10/14 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="打造大长腿的秘密" dPid="3" dBehalf="就要放肆爱高帮靴！" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2062/116/590262216/29549/2e796eca/561b5e99N30df5edc.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2014/105/624390458/26952/30e91efb/561b5e9dN8d180b79.jpg"
+       dgid="3212" dgid="3212" dlocationid="8451" dShopPtag="37790.1.302" dDate="2015/10/17 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="手表就要够精致" dPid="2" dBehalf="优雅精致看这里" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2263/114/609537448/30244/742cbbbf/561cd495N3287f228.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t1780/121/2028741130/30507/3b13d8d9/561cd49bN5a903df6.jpg"
+       dgid="3212" dgid="3212" dlocationid="8453" dShopPtag="37790.1.301" dDate="2015/10/16 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="学院派男神这么穿" dPid="2" dBehalf="经典百搭，清新过秋冬" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2131/7/634732573/48770/c6668fff/561dbde5N8c8416ce.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2356/363/629343256/25971/b80fd1/561dbdedNd990c288.jpg"
+       dgid="3212" dgid="3212" dlocationid="8454" dShopPtag="37790.1.300" dDate="2015/10/15 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="家里要有的智能家电" dPid="1" dBehalf="高质量生活，你需要有它" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2422/134/631591259/28278/acbfd23b/561dccddNa2ac5906.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t1831/61/1994965204/28358/6293a567/561dcce3Nd113f9d6.jpg"
+       dgid="3213" dgid="3213" dlocationid="8455" dShopPtag="37790.1.303" dDate="2015/10/18 09:00:00" dLink=""
+       dShow="{#dshow#}"></p>
+
+    <p dTitle="我家秋冬不怕冷" dPid="1" dBehalf="就是要保暖到底！" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t1957/58/647243403/34922/3f249120/5620b51cNd59537fd.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2323/57/705265776/22527/cdfcc841/5620b524N992e87f5.jpg"
+       dgid="3523" dgid="3523" dlocationid="9423" dShopPtag="37790.1.427" dDate="2015/10/19 09:00:00" dLink=""
+       dShow=""></p>
+
+    <p dTitle="千店豪礼大放送" dPid="" dBehalf="抢红包，赢免单，带您玩转11.11" dMark="微店11.11"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2023/117/861673294/26532/cd71e4cd/56317adaN6d34c2fb.jpg"
+       dSubImg="" dgid="" dgid="" dlocationid="" dShopPtag="37790.1.317" dDate="2015/10/20 12:00:00"
+       dLink="http://wqs.jd.com/event/weidian/preheat.shtml?ptag=37790.1.317&tab=7" dShow=""></p>
+
+    <p dTitle="慵懒甜美针织衫" dPid="" dBehalf="毛衣放大招，抢镜最时髦前沿" dMark="微店11.11"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t1948/102/881451721/49090/80ca3edd/5631ed2dNbdbdaf95.jpg"
+       dSubImg="" dgid="" dgid="" dlocationid="" dShopPtag="37529.2.31" dDate="2015/11/02 00:00:00"
+       dLink="http://wqs.jd.com/event/weidian/1102zhenzhishan/index.shtml?ptag=37529.2.31" dShow=""></p>
+
+    <p dTitle="戒不掉的美包控" dPid="" dBehalf="名品女包精选" dMark="微店11.11"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2356/222/933752595/27317/6d5123d7/5636cc7bN7fd1061b.jpg"
+       dSubImg="" dgid="" dgid="" dlocationid="" dShopPtag="37790.1.338" dDate="2015/11/03 00:00:00"
+       dLink="http://wqs.jd.com/event/weidian/jiebudiaodemeibaokong/index.shtml?ptag=37790.1.338" dShow=""></p>
+
+    <p dTitle="明星女神都这么穿" dPid="" dBehalf="跟着时尚女神秀穿搭" dMark="微店11.11"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t1978/32/995661615/30562/ebbe6196/56382a77Nf9d55dfa.jpg"
+       dSubImg="" dgid="" dgid="" dlocationid="" dShopPtag="37529.2.32" dDate="2015/11/04 00:00:00"
+       dLink="http://wqs.jd.com/event/weidian/1104MXNS/index.shtml?ptag=37790.1.345" dShow=""></p>
+
+    <p dTitle="气质皮草 气场爆棚" dPid="" dBehalf="冬季皮草 优雅轻奢" dMark="微店11.11"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2152/21/954140578/25544/83c09a7d/563887f9N3607d9b9.jpg"
+       dSubImg="" dgid="" dgid="" dlocationid="" dShopPtag="37790.1.365" dDate="2015/11/06 00:00:00"
+       dLink="http://wqs.jd.com/event/weidian/picao11/index.shtml?ptag=37790.1.365" dShow=""></p>
+
+    <p dTitle="秋冬时髦小大人" dPid="" dBehalf="为孩子珍藏童年" dMark="微店11.11"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t1924/292/1066094888/23021/868bf46e/563c02b8N131f1a28.jpg"
+       dSubImg="" dgid="" dgid="" dlocationid="" dShopPtag="37790.1.375" dDate="2015/11/07 00:00:00"
+       dLink="http://wqs.jd.com/event/weidian/ctppthz_/index.shtml?ptag=37790.1.375" dShow=""></p>
+
+    <p dTitle="11.11珠宝爆款购物攻略" dPid="" dBehalf="大牌黄金满500减60 银饰低至5元/g" dMark="微店11.11"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2410/208/1077754882/30436/d9e66101/563c74caNae3f1068.jpg"
+       dSubImg="" dgid="" dgid="" dlocationid="" dShopPtag="37790.1.365" dDate="2015/11/08 00:00:00"
+       dLink="http://wqs.jd.com/event/weidian/1111zhubaohuichang/index.shtml?ptag=37790.1.365" dShow=""></p>
+
+    <p dTitle="线下家具体验展" dPid="" dBehalf="线上领券，线下体验" dMark="微店11.11"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2116/113/1071503144/42970/6bac9bb9/563c7f4eN2d4a7b27.jpg"
+       dSubImg="" dgid="" dgid="" dlocationid="" dShopPtag="37790.1.395" dDate="2015/11/09 00:00:00"
+       dLink="http://wqs.jd.com/event/weidian/shuang11yurehuichang/index.shtml?ptag=37790.1.395" dShow=""></p>
+
+    <p dTitle="运动风强势来袭" dPid="" dBehalf="唤醒每一种潜能" dMark="微店11.11"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2365/39/1012599546/35536/25fabf31/56400129N4121c3bb.jpg"
+       dSubImg="" dgid="" dgid="" dlocationid="" dShopPtag="37790.1.405" dDate="2015/11/10 00:00:00"
+       dLink="http://wqs.jd.com/event/weidian/ydfqx1110/index.shtml?ptag=37790.1.405" dShow=""></p>
+
+    <p dTitle="千店狂欢 热销推荐" dPid="1" dBehalf="微店11.11好店清单" dMark="微店11.11"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2521/197/288454347/29357/96d09e16/5641ef55N01ba0778.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2173/157/1027751157/25132/435d400b/5641ef70Nab1be521.jpg"
+       dgid="3563" dgid="3563" dlocationid="9423" dShopPtag="37790.1.427" dDate="2015/11/11 00:00:00" dLink=""
+       dShow=""></p>
+
+    <p dTitle="甜美冬季 温暖来袭" dPid="3" dBehalf="冬日连衣裙实用美搭" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2404/33/1176095574/30134/545d4615/56444e60Nf7d917eb.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2425/211/1153783540/30507/e95d2a7d/56444e6dN9eb3ddc6.jpg"
+       dgid="3562" dgid="3562" dlocationid="9420" dShopPtag="37790.1.427" dDate="2015/11/13 00:00:00" dLink=""
+       dShow=""></p>
+
+    <p dTitle="可爱萌娃都爱穿" dPid="3" dBehalf="每个女孩都是甜美小天使" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2026/259/1234839311/27157/c010a819/5645a026N8554cec6.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t1897/18/1142086435/30434/e3b88983/56459aeeN3692cdef.jpg"
+       dgid="3562" dgid="3562" dlocationid="9421" dShopPtag="37790.1.428" dDate="2015/11/14 09:00:00" dLink=""
+       dShow=""></p>
+
+    <p dTitle="用配饰提升造型感" dPid="3" dBehalf="多彩“饰”界 流行配饰" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t1972/35/1221195561/45643/e65bcafa/5645a29aN1873069c.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2230/334/1097538730/28370/7c4c72de/5645a2a0Nb367cd09.jpg"
+       dgid="3562" dgid="3562" dlocationid="9422" dShopPtag="37790.1.429" dDate="2015/11/15 09:00:00" dLink=""
+       dShow=""></p>
+
+    <p dTitle="冬日暖男穿衣指南" dPid="2" dBehalf="型男秋冬温暖出型，温暖不臃肿" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2179/121/1131352304/25639/de2a6bd4/5645a324Nb67f2af4.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2173/31/1099644252/29720/cc6448b0/56459ca6Ncd334f16.jpg"
+       dgid="3563" dgid="3563" dlocationid="9425" dShopPtag="37790.1.430" dDate="2015/11/16 09:00:00" dLink=""
+       dShow=""></p>
+
+    <p dTitle="腕表的时尚搭配秀" dPid="2" dBehalf="手腕反复间掌控时间" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2404/188/1212188399/29758/9cdedfbb/5649871eNf5f68109.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2536/87/382713858/18457/3cc0b7cc/56498722N49159870.jpg"
+       dgid="3563" dgid="3563" dlocationid="9426" dShopPtag="37790.1.431" dDate="2015/11/17 09:00:00" dLink=""
+       dShow=""></p>
+
+    <p dTitle="超百搭的冬季男鞋" dPid="2" dBehalf="一双好鞋，让风度与温度兼得" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t1960/186/1009941854/30100/620fd54d/564a97a8Nb633e5e2.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2368/225/1161389416/26920/4a97a9b/564a9722Nb48ad802.jpg"
+       dgid="3563" dgid="3563" dlocationid="9427" dShopPtag="37790.1.432" dDate="2015/11/18 09:00:00" dLink=""
+       dShow=""></p>
+
+    <p dTitle="那些热销的家用电器" dPid="1" dBehalf="年度钜惠 不留遗憾" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2089/33/1292623364/46563/ede0af0d/564c1d69Nf6f7c93a.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t1987/166/1172296081/45251/99d99823/564c1a73N383b1938.jpg"
+       dgid="3563" dgid="3563" dlocationid="9428" dShopPtag="37790.1.433" dDate="2015/11/19 00:00:00" dLink=""
+       dShow=""></p>
+
+    <p dTitle="高逼格厨房用这些" dPid="2" dBehalf="国际厨具，享受奢侈人生" dMark="最新主题"
+       dMainImg="http://img11.360buyimg.com/jdphoto/s600x300_jfs/t2449/250/1309154290/40680/eb3091e3/564d39f7N43173df5.jpg"
+       dSubImg="http://img11.360buyimg.com/jdphoto/s640x200_jfs/t2359/16/1308348494/28567/c5101959/564d3974Ncaa3d33f.jpg"
+       dgid="3572" dgid="3572" dlocationid="9451" dShopPtag="37790.1.434" dDate="2015/11/20 09:00:00" dLink=""
+       dShow=""></p>
+
+    <p dTitle="" dPid="" dBehalf="" dMark="" dMainImg="" dSubImg="" dgid="" dgid="" dlocationid="" dShopPtag=""
+       dDate="2015/11/21 00:00:00" dLink="" dShow=""></p><!--WEBPAGEEND@7963-->
+</div>
+
+<script type="text/template" id="tplSpecialChannel">
+    <%
+    var getScaleImg = JD.img.getScaleImg;
+    %>
+    <%for(var i=0,j=list.length;i
+    <j;i++){%>
+    <div class="global_span">
+        <h3><%=list[i].materialname%></h3>
+        <a href="<%=list[i].sUrl%>" class="url">
+            <div class="img">
+                <img init_src="<%=getScaleImg(list[i].material)%>"/>
+            </div>
+        </a>
+
+        <div class="ft">
+            <div class="line">
+                <%=list[i].materialdesc%>
+            </div>
+        </div>
+    </div>
+    <%}%>
+</script>
+
+<!-- S 猜你喜欢 -->
+<script type="text/template" id="tplInterest">
+    <%
+    var getScaleImg = JD.img.getScaleImg;
+    for(var i=0,len = data.length;i< len;i++){
+    var o = data[i],
+    imgSrc,
+    c3id ='';
+    if (o) {
+    imgSrc = "//img14.360buyimg.com/n7/"+o.img;
+    c3id = (recid == '630005'|| recid =='630002') ? '' : o.c3,
+    repUrl = o.clk || o.clk_url,
+    aUrl = "//wq.jd.com/item/view?sku=" + o.sku + "&PTAG=" + rd + "&exp=" + exp
+    + "&rec=" + recid + (flow ? ('&flow='+flow+'&sid='+o.sid+'&source='+o.source) : "");
+
+    imgSrc = getScaleImg(imgSrc);
+    %>
+    <div class="item">
+        <a href="<%=aUrl%>" class="url" data-sku="<%=o.sku%>" data-cid="<%=c3id%>" data-recid="<%=recid%>"
+           repURL="<%=repUrl%>">
+            <div class="img">
+                <img init_src="<%=imgSrc%>" alt="">
+            </div>
+            <div class="info">
+                <div class="name"><%=o.t%></div>
+                <div class="cost"><span class="price">&yen;<%=o.jp%></span></div>
+                <!--<div class="cmt">0已评价</div>-->
+            </div>
+        </a>
+    </div>
+    <%}}%>
+</script>
+
+<script type="text/javascript">
+    window._navfoot = {
+        manual: true,
+        rd: {
+            home: '37787.13.1',
+            search: '37787.13.2',
+            cart: '37787.13.3',
+            user: '37787.13.4'
+        }
+    };
+    JD.calendar.period_26_31 && (window.GlOBAL_SHOW_PROMOTE1111 = true);
+    (JD.calendar.period_01_10 || JD.calendar.period_11_11 || JD.calendar.period_12_12) && (window.GLOBAL_PROMOTE_SIDE_NAVE = true);
+    window.GLOBAL_WX_PORLATA11 = true; //展示老刘
+</script>
+<!-- E 猜你喜欢 -->
+<!-- E 模版区 -->
+<script type="text/javascript">
+    //entra746-34
+    (function (global) {
+        var g = [[]],
+             d = '//wq.360buyimg.com',
+             m = {},
+             blankjs = "",
+             grays = {},
+             mdebug = location.href.indexOf("mdebug=1") != -1;
+        m.alias = {};
+        var a = {},
+             p = {},
+             c = [];
+        g["1"] = [
+            "\/js\/version\/201505\/cookie.201505071822.js",
+            "\/js\/version\/201505\/date.201505071823.js",
+            "\/js\/version\/201505\/formatJson.201505071823.js",
+            "\/js\/version\/201505\/iscroll.201505131224.js",
+            "\/js\/version\/201508\/lazyLoad.201508061002.js",
+            "\/js\/version\/201511\/loadJs.201511251028.js",
+            "\/js\/version\/201510\/loopScroll.201510211348.js",
+            "\/js\/version\/201501\/md5.201501211603.js",
+            "\/js\/version\/201507\/mqqStorage.201507151518.js",
+            "\/js\/version\/201507\/report.201507281703.js",
+            "\/js\/version\/201501\/scrollCtrl.201501191811.js",
+            "\/js\/version\/201503\/time.201503121608.js",
+            "\/js\/version\/201508\/util.201508201549.js",
+            "\/js\/version\/201511\/wfdata.201511191922.js"];
+        g["2"] = [
+            "\/js\/version\/201510\/wfpage.201510261502.js",
+            "\/js\/version\/201510\/wq.lanchGjApp.201510231410.js",
+            "\/js\/version\/201511\/wq.wx.index.201511251647.js",
+            "\/js\/version\/201511\/wq.wx.menu.201511201122.js",
+            "\/js\/version\/201509\/zepto.201509161730.js"];
+
+        c = [
+            ['cookie', 1, 0],
+            ['date', 1, 1],
+            ['formatJson', 1, 2],
+            ['iscroll', 1, 3],
+            ['lazyLoad', 1, 4],
+            ['loadJs', 1, 5],
+            ['loopScroll', 1, 6],
+            ['md5', 1, 7],
+            ['mqqStorage', 1, 8],
+            ['report', 1, 9],
+            ['scrollCtrl', 1, 10],
+            ['time', 1, 11],
+            ['util', 1, 12],
+            ['wfdata', 1, 13],
+            ['wfpage', 2, 0],
+            ['wq.lanchGjApp', 2, 1],
+            ['wq.wx.index', 2, 2],
+            ['wq.wx.menu', 2, 3],
+            ['zepto', 2, 4]];
+        var bExeConfig = false;
+        if (typeof(JSON) != "undefined" && window.localStorage) {
+            if (window.JD && JD.GLOBAL_CONFIG && JD.GLOBAL_CONFIG.MODULEJS_CROSS_LOCALSTORAGE) {
+                JD.store.getAllModulejs(function (key, value) {
+                    var mStorage = {};
+                    for (var i = 0, j = value.length; i < j; i++) {
+                        var item = value[i];
+                        mStorage[item.key] = item.obj;
+                    }
+                    checkStorage(mStorage);
+                    bExeConfig = true;
+                    _m_setConfig();
+                })
+                function checkStorage(mStorage) {
+                    for (var key in mStorage) {
+                        if (/^_m_/.test(key)) {
+
+                            var store = mStorage[key];
+                            var i = key.substr(3);
+                            if ((new Date()).getTime() > store.cacheTime) {
+                                continue;
+                            }
+                            var _m = getModuleMap(i);
+                            if (!_m || _m.group == 0) {
+                                if (_m) {
+                                    var curPath1 = g[_m.group][_m.groupid];
+                                    if ((d + curPath1) == store.path) {
+                                        if (window.__cachelist) {
+                                            __cachelist[0].push(_m.id);
+                                        }
+                                    }
+                                }
+                                continue;
+                            }
+                            var curPath = g[_m.group][_m.groupid];
+
+                            if ((d + curPath) == store.path) {
+                                g[0].push(curPath);
+                                g[_m.group][_m.groupid] = blankjs;
+                                c[_m.index] = [_m.id, 0, g[0].length - 1];
+                                if (window.__cachelist) {
+                                    __cachelist[0].push(_m.id);
+                                }
+                            }
+                        }
+                    }
+                }
+            } else {
+                for (var key in localStorage) {
+                    if (/^_m_/.test(key)) {
+
+                        var store = JSON.parse(localStorage.getItem(key));
+                        var i = key.substr(3);
+                        if ((new Date()).getTime() > store.cacheTime) {
+                            continue;
+                        }
+                        var _m = getModuleMap(i);
+                        if (!_m || _m.group == 0) {
+                            if (_m) {
+                                var curPath1 = g[_m.group][_m.groupid];
+                                if ((d + curPath1) == store.path) {
+                                    if (window.__cachelist) {
+                                        __cachelist[0].push(_m.id);
+                                    }
+                                }
+                            }
+                            continue;
+                        }
+                        var curPath = g[_m.group][_m.groupid];
+
+                        if ((d + curPath) == store.path) {
+                            g[0].push(curPath);
+                            g[_m.group][_m.groupid] = blankjs;
+                            c[_m.index] = [_m.id, 0, g[0].length - 1];
+                            if (window.__cachelist) {
+                                __cachelist[0].push(_m.id);
+                            }
+
+
+                        }
+                    }
+                }
+            }
+
+        }
+        function getModuleMap(id) {
+            for (var i = 0; i < c.length; i++) {
+                if (c[i][0] == id) {
+                    return {"id": id, "index": i, "group": c[i][1], "groupid": c[i][2]};
+                }
+            }
+            return "";
+        }
+
+        function getCombUrl(list) {
+            var a = [];
+            for (var i = 0; i < list.length; i++) {
+                if (list[i]) {
+                    a.push(list[i]);
+                }
+            }
+            return a.length > 1 ? (d + "/c/=" + a.join(",")) : (d + a[0]);
+        }
+
+        function _m_setConfig() {
+            for (var i = 0; i < c.length; i++) {
+                var surl = d + g[c[i][1]][c[i][2]];
+                var furl = getCombUrl(g[c[i][1]]);//合并包地址
+                a[c[i][0]] = surl;
+                p[c[i][0]] = (c[i][1] == 0) ? surl : furl;
+            }
+
+            m.alias = mdebug ? a : p;
+            m.moduleURI = a;
+
+
+            global._moduleConfig = m;
+        }
+
+        !bExeConfig && _m_setConfig();
+        function gray(m) {
+        }
+
+    })(this);
+
+</script>
+<script type="text/javascript">
+    var modulejs, require, define;
+    (function (global) {
+    var mod, cfg, _modulejs, _define, _require;
+    var version = "1.0.2";
+    var isCache = true;
+    var cacheTime = 60 * 60 * 24 * 30 * 1000;
+    cfg = {
+        debug: location.href.indexOf("mdebug=1") != -1 ? true : false,
+        alias: {},
+        cssAlias: {},
+        moduleURI: {},
+        vars: {},
+        uris: {},
+        modules: {},
+        callback: [],
+        actModules: {},
+        cacheLoad: {},
+        cacheDel: {},
+        deps: {},
+        events: {},
+        timing: {}
+    };
+    _modulejs.config = config;
+    config(global["_moduleConfig"] ? global._moduleConfig : cfg);
+    global["_moduleConfig"] = cfg;
+    require = _require;
+    define = _define;
+    modulejs = _modulejs;
+    on("module_ready", function (id, fromeCache) {
+        try {
+            cfg.callback = cleanArray(cfg.callback);
+            var init = cfg.callback, l = init.length;
+            for (var i = 0; i < l; i++) {
+                if (init[i] && checkDeps(init[i].dependencies)) {
+                    var cb = init[i].factory;
+                    var deps = init[i].dependencies;
+                    var mods = [];
+                    var allDeps = [];
+                    var m;
+                    for (var j = 0; j < deps.length; j++) {
+                        var m = _require(deps[j]);
+                        allDeps.push(m.dependencies);
+                        mods.push(m);
+                    }
+                    debug("callback_is_run=start", cb.toString(), cfg.callback);
+                    init[i] = null;
+                    cb.apply(null, mods);
+                    cfg.debug && emit("callback_is_run", cb.toString().replace(/[\r\n]/g, ""));
+                }
+            }
+        } catch (e) {
+            window.onerror('', '', '', '', e);
+            window.console && window.console.error(e);
+        }
+    });
+    on("module_require", function (id) {
+        cfg.actModules[id] = cfg.actModules[id] ? (cfg.actModules[id] + 1) : 1;
+    });
+    on("module_cacheDel", function (id) {
+        cfg.cacheDel[id] = 1;
+    });
+    on("cache_load", function (m) {
+    });
+    on("module_loss_alias", function (id) {
+        console.error("module_loss_alias:" + id);
+    });
+    var cacheNow = new Date();
+    _loadCache();
+    cfg.timing['loadcache'] = new Date() - cacheNow;
+    function _loadCache() {
+        if (!_useCache()) {
+            return false;
+        }
+        if (window.JD && JD.GLOBAL_CONFIG && JD.GLOBAL_CONFIG.MODULEJS_CROSS_LOCALSTORAGE) {
+            JD.store.del("_modules", "value", function () {
+                console.log(11);
+            })
+            JD.store.getAllModulejs(function (key, value) {
+                var mStorage = {};
+                for (var i = 0, j = value.length; i < j; i++) {
+                    var item = value[i];
+                    mStorage[item.key] = item.obj;
+                }
+                checkStorage(mStorage);
+            })
+            function checkStorage(mStorage) {
+                for (var key in mStorage) {
+                    if (/^_m_/.test(key)) {
+                        var store = mStorage[key];
+                        var i = key.substr(3);
+                        var now = (new Date()).getTime();
+                        var oneDay = 24 * 3600 * 1000;
+                        if (cfg.alias[i]) {
+                            if (_getModuleURI(i) != store.path || store.deps.join(",").indexOf("{") > -1) {
+                                emit("module_cacheDel", i);
+                                JD.store.del(key);
+                                continue;
+                            }
+                        } else {
+                            if (now > store.cacheTime) {
+                                emit("module_cacheDel", i);
+                                JD.store.del(key);
+                                continue;
+                            }
+                        }
+                        if (store.cacheTime - now < oneDay) {
+                            store.cacheTime = (new Date()).getTime() + cacheTime;
+                            try {
+                                JD.store.del(key, function () {
+                                    JD.store.set(key, store);
+                                });
+                            } catch (e) {
+                            }
+                        }
+                        cfg.cacheLoad[store.id] = store;
+                        emit("cache_load", store);
+                    }
+                }
+            }
+        } else {
+            localStorage.removeItem("_modules");
+            for (var key in localStorage) {
+                if (/^_m_/.test(key)) {
+                    var store = JSON.parse(localStorage.getItem(key));
+                    var i = key.substr(3);
+                    var now = (new Date()).getTime();
+                    var oneDay = 24 * 3600 * 1000;
+                    if (cfg.alias[i]) {
+                        if (_getModuleURI(i) != store.path || store.deps.join(",").indexOf("{") > -1) {
+                            emit("module_cacheDel", i);
+                            localStorage.removeItem(key);
+                            continue;
+                        }
+                    } else {
+                        if (now > store.cacheTime) {
+                            emit("module_cacheDel", i);
+                            localStorage.removeItem(key);
+                            continue;
+                        }
+                    }
+                    if (store.cacheTime - now < oneDay) {
+                        store.cacheTime = (new Date()).getTime() + cacheTime;
+                        try {
+                            localStorage.removeItem(key);
+                            localStorage.setItem(key, JSON.stringify(store));
+                        } catch (e) {
+                        }
+                    }
+                    cfg.cacheLoad[store.id] = store;
+                    emit("cache_load", store);
+                }
+            }
+        }
+    }
+
+    function _getModuleURI(id) {
+        return cfg.moduleURI[id] ? cfg.moduleURI[id] : cfg.alias[id];
+    }
+
+    function _useCache(id, deps, factory) {
+        if (typeof(JSON) == "undefined") {
+            return false;
+        }
+        if (!isCache) {
+            return false;
+        }
+        if (!(JSON && window.localStorage)) {
+            return false;
+        }
+        if (cfg.debug) {
+            return false;
+        }
+        var agent = navigator.userAgent.toLowerCase();
+        if (agent.indexOf("msie") > 0) {
+            var m = agent.match(/msie\s([\d\.]+);/i);
+            if (m && m.length >= 2 && parseInt(m[1]) <= 6) {
+                return false;
+            }
+        }
+        if (id && id.indexOf("_") == 0) {
+            return false;
+        }
+        if (factory && factory.toString().indexOf("_cacheThisModule_") < 0) {
+            return false;
+        }
+        return true;
+    }
+
+    function _cacheModule(id, deps, factory) {
+        var key = "_m_" + id;
+        var _t = localStorage.getItem(key);
+        if (window.JD && JD.GLOBAL_CONFIG && JD.GLOBAL_CONFIG.MODULEJS_CROSS_LOCALSTORAGE) {
+            var ms = {
+                "id": id,
+                "deps": deps,
+                "factory": factory.toString(),
+                "path": _getModuleURI(id),
+                "cacheTime": (new Date()).getTime() + cacheTime
+            };
+            try {
+                JD.store.set(key, ms, function (a) {
+                    emit("module_cached", id);
+                });
+            } catch (e) {
+            }
+        } else {
+            var ms = _t ? JSON.parse(_t) : {};
+            ms = {
+                "id": id,
+                "deps": deps,
+                "factory": factory.toString(),
+                "path": _getModuleURI(id),
+                "cacheTime": (new Date()).getTime() + cacheTime
+            };
+            try {
+                localStorage.removeItem(key);
+                localStorage.setItem(key, JSON.stringify(ms));
+                emit("module_cached", id);
+            } catch (e) {
+            }
+        }
+    }
+
+    function _define(id, deps, factory) {
+        if (!id || (typeof(id) != "string"))
+            return;
+        if (id != "_init" && typeof(cfg.modules[id]) != "undefined") {
+            emit("module_ready", id);
+            return true;
+        }
+        if (arguments.length === 2) {
+            factory = deps;
+            deps = null;
+        }
+        deps = isType("Array", deps) ? deps : (deps ? [deps] : []);
+        if (isType("Function", factory)) {
+            var _deps = parseDependencies(factory.toString());
+        }
+        _useCache(id, deps, factory) && _cacheModule(id, deps, factory);
+        deps = mergeArray(deps, _deps);
+        var mod = new Module(id);
+        mod.dependencies = deps || [];
+        for (var i = mod.dependencies.length - 1; i >= 0; i--) {
+            mod.dependencies[i] = parseVars(mod.dependencies[i]);
+        }
+        mod.factory = factory;
+        if (id == "_init") {
+            cfg.callback.push(mod);
+        } else {
+            cfg.modules[id] = mod;
+        }
+        emit("module_ready", id);
+    }
+
+    function _require(id) {
+        id = parseVars(id);
+        var module = cfg.modules[id];
+        emit("module_require", id);
+        if (!module) {
+            emit("module_error", id);
+            return null
+        }
+        if (module.exports) {
+            return module.exports;
+        }
+        var now = new Date();
+        var factory = module.factory;
+        var exports = isType("Function", factory) ? factory(require, module.exports = {}, module) : factory;
+        module.exports = exports === undefined ? module.exports : exports;
+        cfg.timing[id] = new Date() - now;
+        return module.exports;
+    }
+
+    _require.async = _modulejs;
+    _require.css = function (path) {
+        path = cfg.cssAlias && cfg.cssAlias[path] ? cfg.cssAlias[path] : path;
+        if (!path) {
+            return;
+        }
+        var l;
+        if (!window["_loadCss"] || window["_loadCss"].indexOf(path) < 0) {
+            l = document.createElement('link');
+            l.setAttribute('type', 'text/css');
+            l.setAttribute('rel', 'stylesheet');
+            l.setAttribute('href', path);
+            l.setAttribute("id", "loadCss" + Math.random());
+            document.getElementsByTagName("head")[0].appendChild(l);
+            window["_loadCss"] ? (window["_loadCss"] += "|" + path) : (window["_loadCss"] = "|" + path);
+        }
+        l && (typeof callback == "function") && (l.onload = callback);
+        return true;
+    }
+    function _modulejs(deps, factory) {
+        _define("_init", deps, factory);
+    }
+
+    function checkDeps(deps) {
+        var list = {}, flag = true;
+        for (var i = 0; i < deps.length; i++)list[deps[i]] = 1;
+        getDesps(deps, list);
+        for (var i in list) {
+            if (!cfg.modules[i]) {
+                loadModule(i);
+                flag = false;
+            }
+        }
+        return flag;
+        function getDesps(deps, list) {
+            for (var i = 0; i < deps.length; i++) {
+                if (!list[deps[i]]) {
+                    list[deps[i]] = 1;
+                }
+                if (cfg.modules[deps[i]] && list[deps[i]] != 2) {
+                    list[deps[i]] = 2;
+                    getDesps(cfg.modules[deps[i]].dependencies, list);
+                }
+            }
+        }
+    }
+
+    function parseVars(id) {
+        var VARS_RE = /{([^{]+)}/g
+        var vars = cfg.vars
+        if (vars && id.indexOf("{") > -1) {
+            id = id.replace(VARS_RE, function (m, key) {
+                return isType("String", vars[key]) ? vars[key] : key
+            })
+        }
+        return id
+    }
+
+    function mergeObject(a, b) {
+        for (var i in b) {
+            if (!b.hasOwnProperty(i)) {
+                continue;
+            }
+            if (!a[i]) {
+                a[i] = b[i];
+            } else if (Object.prototype.toString.call(b[i]) == "[object Object]") {
+                mergeObject(a[i], b[i]);
+            } else {
+                a[i] = b[i];
+            }
+        }
+        return a;
+    }
+
+    function config(obj) {
+        return cfg = mergeObject(cfg, obj);
+    }
+
+    function Module(id) {
+        this.id = id;
+        this.dependencies = [];
+        this.exports = null;
+        this.uri = "";
+    }
+
+    function loadModule(id) {
+        var m;
+        if (m = cfg.cacheLoad[id]) {
+            return _define(m.id, m.deps, eval("a = " + m.factory));
+        }
+        if (cfg.modules[id]) {
+            emit("module_ready", id);
+            return;
+        }
+        var url = cfg.alias[id] ? cfg.alias[id] : "";
+        if (!url) {
+            emit("module_loss_alias", id);
+            return;
+        }
+        if (cfg.uris[url]) {
+            return;
+        }
+        cfg.uris[url] = 1;
+        if (window.GLOBAL_CROSSORIGIN) {
+            var reloadTimes = 0;
+            var crossorigin = true;
+            var timestamp = "?host=" + location.host;
+            var handler = function () {
+                var callee = arguments.callee
+                cfg.timing[callee.uri] = new Date() - callee.time;
+            };
+            handler.time = new Date();
+            handler.uri = url;
+            function getModuleJs() {
+                JD.sendJs(url + timestamp, {
+                    onLoad: handler, onError: function () {
+                        reloadTimes++;
+                        JD.report.umpBiz({
+                            bizid: '55',
+                            operation: '18',
+                            result: '1',
+                            source: '0',
+                            message: "legos_load_error_times:" + reloadTimes
+                        });
+                        if (reloadTimes === 1) {
+                            timestamp = "?t=" + Date.now();
+                            getModuleJs();
+                        } else if (reloadTimes === 2) {
+                            timestamp = "";
+                            crossorigin = false;
+                            getModuleJs();
+                        }
+                    }, async: true, crossorigin: crossorigin
+                });
+            }
+
+            getModuleJs();
+        } else {
+            var head = document.getElementsByTagName("head")[0] || document.documentElement;
+            var baseElement = head.getElementsByTagName("base")[0];
+            var node = document.createElement("script");
+            node.charset = "utf-8";
+            node.async = true;
+            node.src = url;
+            var handler = function () {
+                var callee = arguments.callee
+                cfg.timing[callee.uri] = new Date() - callee.time;
+            };
+            handler.time = new Date();
+            handler.uri = url;
+            node.onload = handler;
+            baseElement ? head.insertBefore(node, baseElement) : head.appendChild(node);
+        }
+        cfg.debug && emit("file_loading", url);
+    }
+
+    function on(name, cb) {
+        var cbs = cfg.events[name];
+        if (!cbs) {
+            cbs = cfg.events[name] = [];
+        }
+        cbs.push(cb);
+    }
+
+    function emit(name, evt) {
+        debug(name, evt);
+        if (!cfg.events[name] || cfg.events[name].length == 0) {
+            return;
+        }
+        for (var i = 0, l = cfg.events[name].length; i < l; i++) {
+            cfg.events[name][i](evt);
+        }
+        if (name === 'error') {
+            delete cfg.events[name];
+        }
+    }
+
+    function cleanArray(a) {
+        var n = [];
+        for (var i = 0; i < a.length; i++) {
+            a[i] && n.push(a[i]);
+        }
+        return n;
+    }
+
+    function mergeArray(a, b) {
+        for (var i = 0; i < b.length; i++) {
+            (("," + a + ",").indexOf("," + b[i] + ",") < 0) && a.push(b[i]);
+        }
+        return a;
+    }
+
+    function isType(type, obj) {
+        return Object.prototype.toString.call(obj) === "[object " + type + "]"
+    }
+
+    function parseDependencies(code) {
+        var commentRegExp = /(\/\*([\s\S]*?)\*\/|([^:]|^)\/\/(.*)$)/mg;
+        var cjsRequireRegExp = /[^.]\s*require\s*\(\s*["']([^'"\s]+)["']\s*\)/g;
+        var ret = [];
+        code.replace(commentRegExp, "").replace(cjsRequireRegExp, function (match, dep) {
+            dep && ret.push(parseVars(dep));
+        })
+        return ret;
+    }
+
+    function debug() {
+        if (!cfg.debug) {
+            return true;
+        }
+        var a = [], l = arguments.length;
+        for (var i = 0; i < l; i++) {
+            a.push(arguments[i]);
+        }
+        try {
+            console.log.apply(console, a);
+        } catch (e) {
+        }
+    }
+}(this));
+</script>
+<script type="text/javascript">
+    var _speedMarkModule = new Date();
+    modulejs('wq.wx.index', function (m) {
+        speedTimePoint['3'] = new Date();
+        m.init();
+    });</script>
+<!--WEBPAGEBEGIN@8639-->
+<script>
+    !function () {
+        var i = {
+            "rpds": "1",
+            wxapi: "4",
+            redpoinit: "1",
+            ump: "",
+            qq: ",11187-258930,haolry,wdtgQMTLQmHMBF,",
+            gwq: "1"
+        },
+        w = location.href
+        "1" === i.wxapi && -1 === w.indexOf("//wqs.jd.com/order/wq.confirm.shtml") && -1 === w.indexOf("/comment/") && -1 === w.indexOf("/shopping/") && -1 === w.indexOf("/lottery/") && -1 === w.indexOf("/zcdetail/") ? window.GLOBAL_FORBIT_WXAPI = !0 : "2" === i.wxapi && (window.GLOBAL_WX_HEADER || window.GLOBAL_WX_PORAL_PAGE) ? window.GLOBAL_FORBIT_WXAPI = !0 : ("3" === i.wxapi, 1), "0" == i.redpoinit && (window.GlOBAL_HIDE_WXREDPOINT = !0), "1" == i.gwq && (window.GLOBAL_SHOW_FOOT_GOUWU = !0), "" !== i.ump && (window.GLOBAL_UMP_PERCENT = i.ump), "" !== i.rpds && (JD.GLOBAL_CONFIG.RDPS_PERCENT = i.rpds), window.GLOBAL_DEBUG_QQ = i.qq
+    }()
+</script>
+<!--WEBPAGEEND@8639-->
+<script>
+    window.FOOTDETECT = {scene: JD.device.scene},
+    window.addEventListener("load", function () {
+        FOOTDETECT.load = !0, JD && JD.events && JD.events.trigger("modulejs_ready")
+    }),
+    function () {
+        var a = window.location.href.indexOf("goods_fav.shtml") > -1 ? "myreport.min.js" : "wg.mobilereport.min.js",
+             b = {
+                mobilereport: a,
+                report: "wg.report.min.js",
+                wxapi: "wg.wxapi.min.js",
+                qqapi: "wg.qqapi.min.js",
+                mwfoot: "wg.mwfoot.min.js",
+                wxfoot: "wg.wxfoot.min.js",
+                wgstorage: "wg.storage.min.js",
+                jdappdl: "wg.jdappdl.min.js",
+                navfoot: "wg.navfoot.min.js",
+                searchfoot: "wg.searchfoot.min.js",
+                wxfootlevel2: "wg.wxfootlevel2.min.js",
+                sqfootlevel2: "wg.sqfootlevel2.min.js",
+                sqheadsearchbar: "wq.sq.headsearchbar.min.js",
+                wxheadsearchbar: "wq.wx.headsearchbar.min.js",
+                sqheader: "wq.sq.header.min.js",
+                wxheader: "wq.wx.header.min.js",
+                wxlafen: "wq.wx.lafen.min.js",
+                rongzai: "wq.rongzai.min.js"
+            },
+        c = location.href.replace(/(\?|#).*$/, "").indexOf("event") > -1,
+        d = location.href.indexOf("mdebug=1") > -1,
+        e = ["mobilereport", "report"],
+        f = /\/style11\//i.test(location.href),
+        g = "20151127224441",
+        h = "http://wq.360buyimg.com";
+
+        if ("weixin" == JD.device.scene && e.push("wxapi"),
+                c || f || e.push("weixin" == JD.device.scene ? "wxfoot" : "mwfoot"),
+                window.GLOBAL_WX_LEVEL2 && e.push("wxfootlevel2"),
+                window.GLOBAL_SQ_LEVEL2 && e.push("sqfootlevel2"),
+                (window.GLOBAL_SQ_HEADER || JD.GLOBAL_CONFIG.SQ_HEADER_SEARCHBAR) && e.push("sqheadsearchbar"),
+                JD.GLOBAL_CONFIG.WX_HEADER_SEARCHBAR && JD.GLOBAL_CONFIG.USE_NEW_WX_SEARCBAR && e.push("wxheadsearchbar"),
+                window.GLOBAL_SQ_HEADER && (e.push("qqapi"), e.push("sqheader")),
+                window.GLOBAL_WX_LAFEN && e.push("wxlafen"),
+                window.GLOBAL_WX_HEADER && e.push("wxheader"),
+                f || (window._jdApp && e.push("jdappdl"),
+                window._navfoot && e.push("navfoot"),
+                window._searchfoot && e.push("searchfoot"),
+                e.push("rongzai")),
+                e.push("wgstorage"), console.dir(e), d)
+            e.forEach(function (a) {
+            JD.sendJs([h, "/js/common/src/", b[a].replace(".min.js", ".js")].join(""), {defer: !0, async: !0})
+        }); else if (f)e.forEach(function (a) {
+            JD.sendJs([h, "/js/common/dest/", b[a], "?t=" + g].join(""), {defer: !0, async: !0})
+        }); else {
+            var i = [h, "/c/=", e.map(function (a) {
+                return "js/common/dest/" + b[a]
+            }).join(","), "?t=" + g].join("");
+            JD.sendJsByDomain({url: i, defer: !0, async: !0, crossOrigin: !!window.GLOBAL_CROSSORIGIN})
+        }
+    }(),
+    function () {
+        function a(a) {
+            var b = document.createElement("div");
+            b.innerHTML = a;
+            var c = document.body.firstChild;
+            document.body.insertBefore(b, c)
+        }
+
+        var b = window.GLOBAL_DEBUG_QQ,
+             c = JD.cookie.get("jdpin");
+        if (b && c && b.indexOf(c + ",") > 0) {
+            console.log("debug gray...");
+            var d, e, f, g = document;
+            g.addEventListener("touchstart", function (b) {
+                f && (clearTimeout(f), f = null);
+                var c = b.touches[0];
+                d = c.clientx,
+                e = c.clienty,
+                f = setTimeout(function () {
+                    var b = JD.log.get().join("<br>");
+                    a(b)
+                }, 2e3)
+            }, !1),
+            g.addEventListener("touchmove", function (a) {
+                var b = a.touches[0], c = b.clientx, g = b.clienty;
+                f && (Math.abs(c - d) > 5 || Math.abs(g - e) > 5) && (clearTimeout(f), f = null)
+            }, !1),
+            g.addEventListener("touchend", function () {
+                f && (clearTimeout(f), f = null)
+            }, !1)
+        }
+    }(),
+    function () {
+        function a() {
+            return window.getComputedStyle(i, null)["font-size"].replace("px", "")
+        }
+
+        function b() {
+            var b = a();
+            b > 14 && (clearInterval(g), d())
+        }
+
+        function c() {
+            h = !0;
+            var a = document.createElement("link");
+            a.charset = "utf-8", a.rel = "stylesheet", a.href = "http://wq.360buyimg.com/fd/base/css/base/mod_resize_font_guide.s.min.css?a";
+            var b = document.getElementsByTagName("head")[0] || document.documentElement, c = b.getElementsByTagName("base")[0];
+            c ? b.insertBefore(a, c) : b.appendChild(a)
+        }
+
+        function d() {
+            var a = 2, d = document.createElement("div");
+            d.className = "mod_resize_font_guide show", d.innerHTML = ["     ", '    <div class="mod_resize_font__mask"></div>', '    <div class="mod_resize_font__view_box" id="_font_tips_step1">', '        <div class="icon"></div>', '        <div class="msg">为了更好的购物体验，建议您 <br>调整字体到标准模式</div>', "    </div>", '    <div class="mod_resize_font__coner" id="_font_step2" style="display:none"></div>', '    <div class="mod_resize_font__android" id="_step_3_andriod" style="display:none"></div>'].join(""), !h && c(), d.addEventListener("click", function () {
+                2 == a ? (document.querySelector("#_font_tips_step1").style.display = "none", document.querySelector("#_font_step2").style.display = "", a++) : 3 == a ? (document.querySelector("#_font_step2").style.display = "none", document.querySelector("#_step_3_andriod").style.display = "", a++) : 4 == a && (document.body.removeChild(d), setTimeout(function () {
+                    g = setInterval(b, 5e3)
+                }, 5e3))
+            }), document.body.appendChild(d)
+        }
+
+        try {
+            var e = window.GLOBAL_DEBUG_QQ, f = JD.cookie.get("jdpin");
+            if ("weixin" == JD.device.scene && e && /Android/.test(window.navigator.appVersion) && f && -1 !== e.indexOf("," + f + ",")) {
+                var g, h = !1, i = document.createElement("div");
+                i.id = "__myfontinfo", document.body.appendChild(i);
+                {
+                    window.getComputedStyle(i, null)["font-size"]
+                }
+                g = setInterval(b, 5e3)
+            }
+        } catch (j) {
+            clearInterval(g)
+        }
+    }();
+</script>
+
+</body>
+<script>
+    speedTimePoint['2'] = new Date();
+</script>
+</html>
+
